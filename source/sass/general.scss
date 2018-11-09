@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Proxlma Nova";
+  font-weight: 300;
+  font-style: normal;
+  src:
+    local("ProxlmaNova-light"),
+    url("../fonts/ProximaNova-Light.woff") format("woff"),
+    url("../fonts/ProximaNova-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Proxlma Nova";
+  font-weight: 700;
+  font-style: normal;
+  src:
+    local("ProxlmaNova-Bold"),
+    url("../fonts/ProximaNova-Bold.woff") format("woff"),
+    url("../fonts/ProximaNova-Bold.woff2") format("woff2");
+}
+
+body {
+  font-family: "Proxlma Nova", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.test {
+  color: red;
+  background-image: url("../img/address.png");
+}
