@@ -20,16 +20,6 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
-gulp.task("serve", ["style"], function() {
-  server.init({
-    server: "source/",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
-
-});
 gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
 
   gulp.task(`scripts`, () => {
@@ -53,12 +43,17 @@ gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
       .pipe(gulp.dest(`build/js`));
   });
 
-gulp.task(`copy`, [`copy-html`, `scripts`, `style`], () => {
-  return gulp.src([
-    `fonts/**/*.{woff,woff2}`,
-    `img/*.*`
-  ], {base: `.`}).
-  pipe(gulp.dest(`build`));
+gulp.task(`copy-img`, () => {
+  return gulp.src(`source/img/*.*`).
+    pipe(gulp.dest(`build/img`));
+});
+
+gulp.task(`copy-fonts`, () => {
+  return gulp.src(`source/fonts/*.{woff,woff2}`).
+    pipe(gulp.dest(`build/fonts`));
+});
+
+gulp.task(`copy`, [`copy-html`, `copy-fonts`, `copy-img`, `scripts`, `style`], () => {
 });
 
 
