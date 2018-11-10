@@ -26,15 +26,21 @@
       </ul>
     </nav>
     <div class="main-header__wrapper">
-      <img class="main-header__img" src="#" alt="Логотип">
+      <div class="main-header__img-wrapper">
+        <img class="main-header__img" src="#" alt="Логотип">
+        <p class="main-header__img-title">Центр недвижимости</p>
+        <p class="main-header__img-name">“Академический”</p>
+        <p class="main-header__img-description">Качество проверенное временем</p>
+      </div>
+
     </div>
     <ul class="main-header__contact-list list-style-none">
       <li class="main-header__contact-item">
         <p class="main-header__contact-title">Мы работаем:</p>
-        <p class="main-header__contact-description">ежедневно с <span>9:00</span> до <span>20:00</span></p>
+        <p class="main-header__contact-description">ежедневно с <span class="color-green">9:00</span> до <span class="color-green">20:00</span></p>
       </li>
       <li class="main-header__contact-item">
-        <a class="main-header__link" href="tel:+73433289633">+7 (343) <span>328-96-33</span></a>
+        <a class="main-header__link" href="tel:+73433289633">+7 (343) <span class="color-green">328-96-33</span></a>
         <button class="main-header__btn">Перезвоните мне</button>
       </li>
     </ul>
@@ -46,21 +52,21 @@
         <li class="slider__item slider__item--00">
           <div class="slider__text-wrapper">
             <p class="slider__text slider__text--hight">Найдите</p>
-            <p class="slider__text slider__text--mid">Свою <span>недвижимость</span></p>
+            <p class="slider__text slider__text--mid">Свою <span class="color-green">недвижимость</span></p>
             <p class="slider__text slider__text--low">Вместе с ЦН "Академический"</p>
           </div>
         </li>
         <li class="slider__item slider__item--01">
           <div class="slider__text-wrapper">
             <p class="slider__text slider__text--hight">Качество</p>
-            <p class="slider__text slider__text--mid">Проверенное <span>Временем</span></p>
+            <p class="slider__text slider__text--mid">Проверенное <span class="color-green">Временем</span></p>
             <p class="slider__text slider__text--low">Доверяй профессионалам!</p>
           </div>
         </li>
         <li class="slider__item slider__item--02">
           <div class="slider__text-wrapper">
             <p class="slider__text slider__text--hight">Выбор</p>
-            <p class="slider__text slider__text--mid">из <span>26 283</span> Объектов</p>
+            <p class="slider__text slider__text--mid">из <span class="color-green">26 283</span> Объектов</p>
             <p class="slider__text slider__text--low">Только у нас!</p>
           </div>
         </li>
@@ -87,9 +93,9 @@
       <h2 class="special__title main-title">Спецпредложения</h2>
       <p class="special__description">Успевайте приобрести недвижимость по выгодной цене!</p>
       <div class="special__btn-wrapper">
-        <button class="special__btn special__btn--back"><span class="visually-hidden">Назад</span></button>
-        <p class="special__number"><span class="special__color">01 / </span>04</p>
-        <button class="special__btn special__btn--next"><span class="visually-hidden">Вперед</span></button>
+        <button class="special__btn arrow-btn special__btn--back"><span class="visually-hidden">Назад</span></button>
+        <p class="special__number"><span class="color-green">01 / </span>04</p>
+        <button class="special__btn arrow-btn special__btn--next"><span class="visually-hidden">Вперед</span></button>
       </div>
       <ul class="special__list list-style-none">
         <li class="special__item">
@@ -97,10 +103,214 @@
             <img src="#" alt="Фото">
             <p class="special__item-new">Новинка</p>
           </div>
+          <div class="special__item-hover-wrapper">
+            <button class="special__item-btn arrow-btn special__item-btn--back"><span class="visually-hidden">Назад</span></button>
+            <button class="special__item-btn arrow-btn special__item-btn--next"><span class="visually-hidden">Вперел</span></button>
+            <p class="special__item-photo"><span class="special__item-number color-green">3</span> фото из <span class="special__item-number color-green">12</span> </p>
+          </div>
+          <div class="special__item-description-wrapper">
+            <div class="special__name-wrapper">
+              <a class="special__name" href="a"><span>3-К Квартира</span></a>
+              <p><span class="color-green">52</span> м2. <span class="color-green">6/8</span> эт.</p>
+            </div>
+            <p class="special__adress">Академический, Краснолесья 103</p>
+            <p class="special__price"><span class="color-green">3 400 000</span> р.</p>
+          </div>
+        </li>
+        <li class="special__item">
+          <div class="special__item-img-wrapper">
+            <img src="#" alt="Фото">
+            <p class="special__item-new">Новинка</p>
+          </div>
+          <div class="special__item-hover-wrapper">
+            <button class="special__item-btn arrow-btn special__item-btn--back"><span class="visually-hidden">Назад</span></button>
+            <button class="special__item-btn arrow-btn special__item-btn--next"><span class="visually-hidden">Вперел</span></button>
+            <p class="special__item-photo"><span class="special__item-number color-green">3</span> фото из <span class="special__item-number color-green">12</span> </p>
+          </div>
+          <div class="special__item-description-wrapper">
+            <div class="special__name-wrapper">
+              <a class="special__name" href="a"><span>3-К Квартира</span></a>
+              <p><span class="color-green">52</span> м2. <span class="color-green">6/8</span> эт.</p>
+            </div>
+            <p class="special__adress">Академический, Краснолесья 103</p>
+            <p class="special__price"><span class="color-green">3 400 000</span> р.</p>
+          </div>
         </li>
       </ul>
       <button class="special__btn main-btn">Посмотреть все объекты</button>
     </section>
+    <section class="catalog">
+      <h2 class="catalog__title main-title">Наш каталог</h2>
+      <p class="catalog__description">Более 9 755 квартир в базе вторичного жилья и 16 528 квартир в новостройках</p>
+      <ul class="catalog__list list-style-none">
+        <li class="catalog__item">
+          <span class="color-green">01</span>
+          <p class="catalog__item-title">Квартиры, комнаты</p>
+          <p class="catalog__item-description">Центр недвижимости основан группой риелторов с опытом работы более 15 лет</p>
+          <a class="catalog__item-btn arrow-btn main-btn" href="#"></a>
+        </li>
+        <li class="catalog__item">
+          <span class="color-green">02</span>
+          <p class="catalog__item-title">Новостройки</p>
+          <ul class="catalog__sub-list list-style-none">
+            <li class="catalog__sub-item"><a href="#">1-комнатные квартиры</a></li>
+            <li class="catalog__sub-item"><a href="#">2-комнатные квартиры</a></li>
+            <li class="catalog__sub-item"><a href="#">3-комнатные квартиры</a></li>
+            <li class="catalog__sub-item"><a href="#">4-комнатные квартиры</a></li>
+            <li class="catalog__sub-item"><a href="#">многокомнатные квартиры</a></li>
+          </ul>
+          <a class="catalog__item-btn arrow-btn main-btn" href="#"></a>
+        </li>
+        <li class="catalog__item">
+          <span class="color-green">03</span>
+          <p class="catalog__item-title">Коммерческая недвижимость</p>
+          <p class="catalog__item-description">Более 100 объектов от нашего агентства</p>
+          <a class="catalog__item-btn arrow-btn main-btn" href="#"></a>
+        </li>
+      </ul>
+    </section>
+    <section class="about-us">
+      <h2 class="about-us__title main-title">центр недвижимости “Академический”</h2>
+      <p class="about-us__description">Наша миссия создать комфортные и безопасные условия продажи и покупки, как вторичной, так и первичной недвижимости!</p>
+      <ul class="about-us__list list-style-none">
+        <li class="about-us__item">
+          <p class="about-us__item-description">средний опыт работы наших сотрудников<span class="color-green"> 10 </span>лет</p>
+        </li>
+        <li class="about-us__item">
+          <p class="about-us__item-description">работаем с<span class="color-green"> 71 </span> застройщиком</p>
+        </li>
+        <li class="about-us__item">
+          <p class="about-us__item-description">более<span class="color-green"> 9 755 </span>квартир в базе вторичного жилья</p>
+        </li>
+        <li class="about-us__item">
+          <p class="about-us__item-description">более<span class="color-green"> 16 528 </span>квартир в новостройках</p>
+        </li>
+      </ul>
+      <ul class="about-us__contact-list list-style-none">
+        <li class="about-us__contact-item">
+          <p class="about-us__contact-item-description about-us__contact-item-description--adress">всегда рады нашим клиентам в офисе на ул. Краснолесья, 93</p>
+        </li>
+        <li class="about-us__contact-item">
+          <div class="about-us__contact-item-request about-us__contact-item-request--selection">
+            <p class="about-us__contact-item-title">Заявка на подбор недвижимости</p>
+            <p class="about-us__contact-item-description">Мы подберем наиболее оптимальный вариант</p>
+            <a class="about-us__contact-item-btn arrow-btn main-btn" href="#"></a>
+          </div>
+          <div class="about-us__contact-item-request about-us__contact-item-request--mortgage">
+            <p class="about-us__contact-item-title">Заявка на ипотеку</p>
+            <p class="about-us__contact-item-description">Рассмотрим за 1 день!</p>
+            <a class="about-us__contact-item-btn arrow-btn main-btn" href="#"></a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="people">
+      <h2 class="people__title main-title">наши агенты по недвижимости</h2>
+      <p class="people__description">В нашем штате более 20 специалистов</p>
+      <div class="people__btn-wrapper">
+        <button class="people__btn arrow-btn people__btn--back"><span class="visually-hidden">Назад</span></button>
+        <p class="people__number"><span class="color-green">01 / </span>04</p>
+        <button class="people__btn arrow-btn people__btn--next"><span class="visually-hidden">Вперед</span></button>
+      </div>
+      <ul class="people__list list-style-none">
+        <li class="people__item">
+          <div class="people__item-img">
+            <img src="#" alt="Фото">
+          </div>
+          <p class="people__item-name">Зыкова Зоя захаровна</p>
+          <p class="people__item-position">Специалист по недвижимости</p>
+          <a class="people__item-phone" href="tel:+79009002020">+7 (908) 90-35-895</a>
+          <a class="people__item-email" href="mailto:e1@e1.ru">cn-akadem@mail.ru </a>
+          <p class="people__item-description">Образование высшее. Стаж 16 лет. Любые операции с недвижимостью, профессионально, безопасно, корректно. Многолетний опыт гарантирует возможность избежать “подводные камни” на сделках с недвижимостью. </p>
+        </li>
+      </ul>
+    </section>
+    <section class="reviews">
+      <h2 class="reviews__title main-title">Отзывы</h2>
+      <p class="reviews__description">Просто почитайте, что говорят о нас наши клиенты</p>
+      <ul class="reviews__list list-style-none">
+        <li class="reviews__item">
+          <div class="reviews__item-img"><img src="#" alt="Отзыв"></div>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__item-img"><img src="#" alt="Отзыв"></div>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__item-img"><img src="#" alt="Отзыв"></div>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__item-img"><img src="#" alt="Отзыв"></div>
+        </li>
+      </ul>
+    </section>
+    <section class="consiltation">
+      <h2 class="visually-hidden">Консультация</h2>
+      <div class="consultation-wrapper">
+        <p class="consultation__title">получите консультацию бесплатно!</p>
+        <p class="consultation__description">Обратитесь к нашим специалистам, и мы подскажем лучшее решение!</p>
+        <a class="consultation__btn main-btn" href="#">Получить консультацию</a>
+      </div>
+    </section>
+    <section class="news">
+      <h2 class="news__title main-title">Новости</h2>
+      <p class="news__description">Последние новости нашего агентства</p>
+      <div class="news__btn-wrapper">
+        <button class="news__btn arrow-btn news__btn--back"><span class="visually-hidden">Назад</span></button>
+        <p class="news__number"><span class="color-green">01 / </span>04</p>
+        <button class="news__btn arrow-btn news__btn--next"><span class="visually-hidden">Вперед</span></button>
+      </div>
+      <ul class="news__list list-style-none">
+        <li class="news__item">
+          <div class="news__item-img">
+            <img src="#" alt="Фото">
+          </div>
+          <p class="news__item-date">3 сентября 2018 г</p>
+          <a class="news__item-title" href="#"><span>5 новых объектов в каталоге</span></a>
+          <p class="news__item-description">Центр недвижимости основан группой риелторов с опытом работы более 15 лет</p>
+        </li>
+      </ul>
+    </section>
+    <section class="map">
+      <!-- Делай свою карту -->
+    </section>
   </main>
+  <footer>
+    <div class="footer-wrapper">
+      <section class="copyright">
+        <h4 class="copyright__title">ЦН “Академический”</h4>
+        <p class="copyright__description">Все права защищены</p>
+        <ul class="copyright__list list-style-none">
+          <li class="copyright__item"><a href="#" class="copyright__link"><span class="vissually-hidden">VK</span></a></li>
+          <li class="copyright__item"><a href="#" class="copyright__link"><span class="vissually-hidden">TW</span></a></li>
+          <li class="copyright__item"><a href="#" class="copyright__link"><span class="vissually-hidden">FB</span></a></li>
+          <li class="copyright__item"><a href="#" class="copyright__link"><span class="vissually-hidden">YT</span></a></li>
+        </ul>
+      </section>
+      <nav class="footer-menu">
+        <ul class="footer-menu__list list-style-none">
+          <li class="footer-menu__item"><a href="#">каталог объектов</a></li>
+          <li class="footer-menu__item"><a href="#">Услуги</a></li>
+          <li class="footer-menu__item"><a href="#">Партнерские программы</a></li>
+          <li class="footer-menu__item"><a href="#">О нас</a></li>
+          <li class="footer-menu__item"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+      <ul class="footer__contact-list list-style-none">
+        <li class="footer__contact-item">
+          <p class="footer__contact-title">Мы работаем:</p>
+          <p class="footer__contact-description">ежедневно с <span class="color-green">9:00</span> до <span class="color-green">20:00</span></p>
+        </li>
+        <li class="footer__contact-item">
+          <a class="footer__link" href="tel:+73433289633">+7 (343) <span class="color-green">328-96-33</span></a>
+          <a class="footer__email" href="mailto:e1@e1.ru" ><span>cn-akadem@mail.ru</span></a>
+        </li>
+      </ul>
+      <section class="developer">
+        <h2 class="visually-hidden">Разработка</h2>
+        <img src="#" alt="Лого" class="developer__img">
+        <p class="developer__description">Создание сайта</p>
+      </section>
+    </div>
+  </footer>
 </body>
 </html>
