@@ -25,7 +25,6 @@ gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
   gulp.task(`scripts`, () => {
     return gulp.src('source/js/*.js')
       .pipe(plumber())
-      .pipe(sourcemaps.init())
       .pipe(rollup({
         plugins: [
           babel({
@@ -96,4 +95,3 @@ gulp.task(`assemble`, [`clean`], () => {
 
 gulp.task(`build`, [`assemble`], () => {
 });
-
