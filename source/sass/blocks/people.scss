@@ -1,0 +1,19 @@
+.people__btn {
+  &--next {
+    &::before {
+      background-image: url("../img/arrow_right_grey.png");
+    }
+    &:hover::before {
+      background-image: url("../img/arrow_right_green.png");
+    }
+  }
+
+  &--back {
+    &::before {
+      background-image: url("../img/arrow_left_grey.png");
+    }
+    &:hover::before {
+      background-image: url("../img/arrow_left_green.png");
+    }
+  }
+}

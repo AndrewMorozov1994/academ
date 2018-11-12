@@ -1,0 +1,6 @@
+.about-us__contact-item-btn {
+  background: white;
+    &::before {
+      background-image: url("../img/arrow_right_green.png");
+    }
+}

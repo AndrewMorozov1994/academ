@@ -1,0 +1,18 @@
+.main-title {
+  text-align: center;
+  font-weight: 700;
+  color: #42ab59;
+  font-size: 24px;
+  text-transform: uppercase;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 1170px) {
+  .main-title {
+    font-size: 36px;
+    text-align: left;
+    max-width: 460px;
+    line-height: 50px;
+  }
+}

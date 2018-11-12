@@ -1,0 +1,22 @@
+.arrow-btn {
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  display: block;
+  position: relative;
+  cursor: pointer;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+}
