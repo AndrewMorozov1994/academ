@@ -22,10 +22,10 @@ body {
   font-family: "Proxlma Nova", "Arial", sans-serif;
   font-weight: 300;
   line-height: 30px;
+  width: 100%;
   margin: 0;
   padding: 0;
   position: relative;
-  color: #6c6c6c;
 }
 
 a {
@@ -34,6 +34,6 @@ a {
 }
 
 .test {
-  color: red;
+  color: blue;
   background-image: url("../img/address.png");
 }
