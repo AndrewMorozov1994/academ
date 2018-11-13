@@ -66,14 +66,43 @@
       zoom: 15
     }),
         objectManager = new ymaps.ObjectManager({
-      // Чтобы метки начали кластеризоваться, выставляем опцию.
       clusterize: true,
       geoObjectOpenBalloonOnClick: false,
       clusterOpenBalloonOnClick: false
     });
-    objectManager.add(data);
 
+    // Кастомные иконки
+    objectManager.objects.options.set({
+      iconLayout: 'default#image',
+      iconImageHref: './img/pin.png',
+      iconImageSize: [63, 58]
+    });
+    //
+
+    objectManager.clusters.options.set('preset', 'islands#darkgreenClusterIcons');
+
+    // Отрисовка на карте
+    objectManager.add(data);
     myMap.geoObjects.add(objectManager);
+    //
+
+    // hover для иконок
+    var onObjectEvent = function onObjectEvent(evt) {
+      var objectId = evt.get('objectId');
+      if (evt.get('type') == 'mouseenter') {
+        // Метод setObjectOptions позволяет задавать опции объекта "на лету".
+        objectManager.objects.setObjectOptions(objectId, {
+          iconImageHref: './img/pin_active.png'
+        });
+      } else {
+        objectManager.objects.setObjectOptions(objectId, {
+          iconImageHref: './img/pin.png'
+        });
+      }
+    };
+
+    objectManager.objects.events.add(['mouseenter', 'mouseleave'], onObjectEvent);
+    //
   });
 
 }());

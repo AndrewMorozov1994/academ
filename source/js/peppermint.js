@@ -6,11 +6,84 @@
  * Depends on Event Burrito (included) | https://github.com/wilddeer/Event-Burrito
  * MIT License
  */
-var slider = Peppermint(document.getElementById('peppermint'));
-var nextBtn = document.querySelector('.special__btn--next');
-var backBtn = document.querySelector('.special__btn--back');
-nextBtn.addEventListener('click', slider.next, false);
-backBtn.addEventListener('click', slider.prev, false);
+
+//  Special Slider
+var sliderSpecial = Peppermint(document.getElementById('peppermint'), {
+  onSlideChange: (n) => {
+    if (n < 9) {
+      sliderSpecialActive.textContent = '0' + (n + 1) + ' / ';
+    } else {
+      sliderSpecialActive.textContent = (n + 1) + ' / ';
+    }
+  },
+  onSetup: (n) => {
+    if (n < 10) {
+      sliderSpecialLenght.textContent = '0' + n;
+    } else {
+      sliderSpecialLenght.textContent = n;
+    }
+  }
+});
+var sliderSpecialNextBtn = document.querySelector('.special__btn--next');
+var sliderSpecialBackBtn = document.querySelector('.special__btn--back');
+var sliderSpecialLenght = document.querySelector('.special__number-lenght');
+var sliderSpecialActive = document.querySelector('.special__number-active');
+sliderSpecialNextBtn.addEventListener('click', sliderSpecial.next, false);
+sliderSpecialBackBtn.addEventListener('click', sliderSpecial.prev, false);
+
+// Slider TOP
+var sliderTop = Peppermint(document.getElementById('slider-top'));
+
+// Slider People
+var sliderPeople = Peppermint(document.getElementById('slider-people'), {
+  onSlideChange: (n) => {
+    if (n < 9) {
+      sliderPeopleActive.textContent = '0' + (n + 1) + ' / ';
+    } else {
+      sliderPeopleActive.textContent = (n + 1) + ' / ';
+    }
+  },
+  onSetup: (n) => {
+    if (n < 10) {
+      sliderPeopleLenght.textContent = '0' + n;
+    } else {
+      sliderPeopleLenght.textContent = n;
+    }
+  }
+});
+var sliderPeopleNextBtn = document.querySelector('.people__btn--next');
+var sliderPeopleBackBtn = document.querySelector('.people__btn--back');
+var sliderPeopleLenght = document.querySelector('.people__number-lenght');
+var sliderPeopleActive = document.querySelector('.people__number-active');
+sliderPeopleNextBtn.addEventListener('click', sliderPeople.next, false);
+sliderPeopleBackBtn.addEventListener('click', sliderPeople.prev, false);
+
+// Slider Reviews
+var sliderReviews = Peppermint(document.getElementById('slider-reviews'));
+
+// Slider News
+var sliderNews = Peppermint(document.getElementById('slider-news'), {
+  onSlideChange: (n) => {
+    if (n < 9) {
+      sliderNewsActive.textContent = '0' + (n + 1) + ' / ';
+    } else {
+      sliderNewsActive.textContent = (n + 1) + ' / ';
+    }
+  },
+  onSetup: (n) => {
+    if (n < 10) {
+      sliderNewsLenght.textContent = '0' + n;
+    } else {
+      sliderNewsLenght.textContent = n;
+    }
+  }
+});
+var sliderNewsNextBtn = document.querySelector('.news__btn--next');
+var sliderNewsBackBtn = document.querySelector('.news__btn--back');
+var sliderNewsLenght = document.querySelector('.news__number-lenght');
+var sliderNewsActive = document.querySelector('.news__number-active');
+sliderNewsNextBtn.addEventListener('click', sliderNews.next, false);
+sliderNewsBackBtn.addEventListener('click', sliderNews.prev, false);
 
 function Peppermint(_this, options) {
     var slider = {

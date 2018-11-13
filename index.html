@@ -13,6 +13,7 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/style.css">
   <title>ЦН “Академический”</title>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<bfdf0586-3c44-47af-9070-a91f11ab6a8a>&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
   <header class="main-header">
@@ -55,7 +56,7 @@
   <main>
     <section class="slider">
       <h2 class="visually-hidden">Слайдер</h2>
-      <ul class="slider__list list-style-none">
+      <ul class="slider__list peppermint list-style-none" id="slider-top">
         <li class="slider__item slider__item--00">
           <div class="slider__text-wrapper">
             <p class="slider__text slider__text--hight">Найдите</p>
@@ -233,15 +234,21 @@
     <section class="people">
       <h2 class="people__title main-title">наши агенты по недвижимости</h2>
       <p class="people__description">В нашем штате более 20 специалистов</p>
-      <div class="people__btn-wrapper">
-        <button class="people__btn arrow-btn people__btn--back"><span class="visually-hidden">Назад</span></button>
-        <p class="people__number"><span class="color-green">01 / </span>04</p>
-        <button class="people__btn arrow-btn people__btn--next"><span class="visually-hidden">Вперед</span></button>
-      </div>
-      <ul class="people__list list-style-none">
+
+      <ul class="people__list peppermint list-style-none" id="slider-people">
         <li class="people__item">
           <div class="people__item-img">
-            <img src="#" alt="Фото">
+            <img src="img/images.jpeg" alt="Фото">
+          </div>
+          <p class="people__item-name">Зыкова Зоя захаровна</p>
+          <p class="people__item-position">Специалист по недвижимости</p>
+          <a class="people__item-phone" href="tel:+79009002020">+7 (908) 90-35-895</a>
+          <a class="people__item-email" href="mailto:e1@e1.ru">cn-akadem@mail.ru </a>
+          <p class="people__item-description">Образование высшее. Стаж 16 лет. Любые операции с недвижимостью, профессионально, безопасно, корректно. Многолетний опыт гарантирует возможность избежать “подводные камни” на сделках с недвижимостью. </p>
+        </li>
+        <li class="people__item">
+          <div class="people__item-img">
+            <img src="img/images.jpeg" alt="Фото">
           </div>
           <p class="people__item-name">Зыкова Зоя захаровна</p>
           <p class="people__item-position">Специалист по недвижимости</p>
@@ -250,26 +257,31 @@
           <p class="people__item-description">Образование высшее. Стаж 16 лет. Любые операции с недвижимостью, профессионально, безопасно, корректно. Многолетний опыт гарантирует возможность избежать “подводные камни” на сделках с недвижимостью. </p>
         </li>
       </ul>
+      <div class="people__btn-wrapper">
+        <button class="people__btn arrow-btn people__btn--back"><span class="visually-hidden">Назад</span></button>
+        <p class="people__number"><span class="color-green people__number-active">01 / </span><span class="people__number-lenght">04</span></p>
+        <button class="people__btn arrow-btn people__btn--next"><span class="visually-hidden">Вперед</span></button>
+      </div>
     </section>
     <section class="reviews">
       <h2 class="reviews__title main-title">Отзывы</h2>
       <p class="reviews__description">Просто почитайте, что говорят о нас наши клиенты</p>
-      <ul class="reviews__list list-style-none">
+      <ul class="reviews__list peppermint list-style-none" id="slider-reviews">
         <li class="reviews__item">
-          <div class="reviews__item-img"><img src="#" alt="Отзыв"></div>
+          <div class="reviews__item-img"><img src="img/review_00.jpg" alt="Отзыв"></div>
         </li>
         <li class="reviews__item">
-          <div class="reviews__item-img"><img src="#" alt="Отзыв"></div>
+          <div class="reviews__item-img"><img src="img/review_01.jpg" alt="Отзыв"></div>
         </li>
         <li class="reviews__item">
-          <div class="reviews__item-img"><img src="#" alt="Отзыв"></div>
+          <div class="reviews__item-img"><img src="img/review_02.jpg" alt="Отзыв"></div>
         </li>
         <li class="reviews__item">
-          <div class="reviews__item-img"><img src="#" alt="Отзыв"></div>
+          <div class="reviews__item-img"><img src="img/review_03.jpg" alt="Отзыв"></div>
         </li>
       </ul>
     </section>
-    <section class="consiltation">
+    <section class="consultation">
       <h2 class="visually-hidden">Консультация</h2>
       <div class="consultation-wrapper">
         <p class="consultation__title">получите консультацию бесплатно!</p>
@@ -280,38 +292,37 @@
     <section class="news">
       <h2 class="news__title main-title">Новости</h2>
       <p class="news__description">Последние новости нашего агентства</p>
-      <div class="news__btn-wrapper">
-        <button class="news__btn arrow-btn news__btn--back"><span class="visually-hidden">Назад</span></button>
-        <p class="news__number"><span class="color-green">01 / </span>04</p>
-        <button class="news__btn arrow-btn news__btn--next"><span class="visually-hidden">Вперед</span></button>
-      </div>
-      <ul class="news__list list-style-none">
+      <ul class="news__list peppermint list-style-none" id="slider-news">
         <li class="news__item">
           <div class="news__item-img">
-            <img src="#" alt="Фото">
+            <img src="img/news.jpg" alt="Фото">
+          </div>
+          <p class="news__item-date">3 сентября 2018 г</p>
+          <a class="news__item-title" href="#"><span>5 новых объектов в каталоге</span></a>
+          <p class="news__item-description">Центр недвижимости основан группой риелторов с опытом работы более 15 лет</p>
+        </li>
+        <li class="news__item">
+          <div class="news__item-img">
+            <img src="img/news.jpg" alt="Фото">
           </div>
           <p class="news__item-date">3 сентября 2018 г</p>
           <a class="news__item-title" href="#"><span>5 новых объектов в каталоге</span></a>
           <p class="news__item-description">Центр недвижимости основан группой риелторов с опытом работы более 15 лет</p>
         </li>
       </ul>
+      <div class="news__btn-wrapper">
+        <button class="news__btn arrow-btn news__btn--back"><span class="visually-hidden">Назад</span></button>
+        <p class="news__number"><span class="color-green news__number-active">01 / </span><span class="news__number-lenght">04</span></p>
+        <button class="news__btn arrow-btn news__btn--next"><span class="visually-hidden">Вперед</span></button>
+      </div>
     </section>
-    <!-- <section class="map">
+    <!-- <section class="map" id="map">
 
     </section> -->
   </main>
   <footer>
     <div class="footer-wrapper">
-      <section class="copyright">
-        <h4 class="copyright__title">ЦН “Академический”</h4>
-        <p class="copyright__description">Все права защищены</p>
-        <ul class="copyright__list list-style-none">
-          <li class="copyright__item"><a href="#" class="copyright__link"><span class="vissually-hidden">VK</span></a></li>
-          <li class="copyright__item"><a href="#" class="copyright__link"><span class="vissually-hidden">TW</span></a></li>
-          <li class="copyright__item"><a href="#" class="copyright__link"><span class="vissually-hidden">FB</span></a></li>
-          <li class="copyright__item"><a href="#" class="copyright__link"><span class="vissually-hidden">YT</span></a></li>
-        </ul>
-      </section>
+
       <nav class="footer-menu">
         <ul class="footer-menu__list list-style-none">
           <li class="footer-menu__item"><a href="#">каталог объектов</a></li>
@@ -331,14 +342,25 @@
           <a class="footer__email" href="mailto:e1@e1.ru" ><span>cn-akadem@mail.ru</span></a>
         </li>
       </ul>
+      <section class="copyright">
+        <h4 class="copyright__title">ЦН “Академический”</h4>
+        <p class="copyright__description">Все права защищены</p>
+        <ul class="copyright__list list-style-none">
+          <li class="copyright__item copyright__item--vk"><a href="#" class="copyright__link"><span class="visually-hidden">VK</span></a></li>
+          <li class="copyright__item copyright__item--tw"><a href="#" class="copyright__link"><span class="visually-hidden">TW</span></a></li>
+          <li class="copyright__item copyright__item--fb"><a href="#" class="copyright__link"><span class="visually-hidden">FB</span></a></li>
+          <li class="copyright__item copyright__item--yt"><a href="#" class="copyright__link"><span class="visually-hidden">YT</span></a></li>
+        </ul>
+      </section>
       <section class="developer">
         <h2 class="visually-hidden">Разработка</h2>
-        <img src="#" alt="Лого" class="developer__img">
+        <img src="img/uralsite.png" alt="Лого" class="developer__img">
         <p class="developer__description">Создание сайта</p>
       </section>
     </div>
   </footer>
   <script src="js/menu.js"></script>
+  <!-- <script src="js/map.js"></script> -->
   <script src="js/peppermint.js"></script>
 </body>
 </html>

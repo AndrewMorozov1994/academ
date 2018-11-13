@@ -1,0 +1,44 @@
+.consultation {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-image: url("../img/consultation.jpg");
+  min-height: 400px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: 40px;
+}
+
+.consultation-wrapper {
+  border: 5px solid white;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.consultation__title {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.consultation__description {
+  font-size: 20px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.consultation__btn {
+  background: #45e087;
+  width: 90%;
+  margin: 0 auto;
+}

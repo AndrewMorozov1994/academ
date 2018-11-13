@@ -29,12 +29,18 @@
   background-size: cover;
   min-height: 880px;
   text-align: center;
-  &:not(:first-child) {
-    display: none;
-  }
+
 
   &--00 {
     background-image: url("../img/slide_00.jpg");
+  }
+
+  &--01 {
+    background-image: url("../img/slide_01.jpg");
+  }
+
+  &--02 {
+    background-image: url("../img/slide_02.jpg");
   }
 }
 
