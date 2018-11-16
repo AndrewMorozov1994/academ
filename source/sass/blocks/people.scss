@@ -124,3 +124,16 @@
   text-decoration: underline;
   margin-bottom: 20px;
 }
+
+@media (min-width: 768px) {
+  .people__item-img  {
+    width: 50%;
+  }
+
+  .people__item-name {
+    width: 80%;
+  }
+  .people__item-position {
+    width: 80%;
+  }
+}

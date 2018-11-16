@@ -59,3 +59,14 @@
 .footer__email {
   font-size: 18px;
 }
+
+@media (min-width: 768px) {
+  .footer-menu {
+    width: 50%;
+  }
+
+  .footer__contact-list {
+    width: 50%;
+    padding-top: 50px;
+  }
+}

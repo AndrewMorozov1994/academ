@@ -66,3 +66,9 @@
   }
 }
 
+@media (min-width: 768px) {
+  .main-menu__list {
+    left: 0;
+    top: 140px;
+  }
+}

@@ -76,3 +76,13 @@
   font-size: 18px;
   color: #6c6c6c;
 }
+
+@media (min-width: 768px) {
+  .news__description {
+    width: 80%;
+  }
+
+  .news__list {
+    width: 50%;
+  }
+}

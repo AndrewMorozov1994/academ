@@ -42,3 +42,10 @@
   width: 90%;
   margin: 0 auto;
 }
+
+@media (min-width: 768px) {
+  .consultation-wrapper {
+    width: 70%;
+    margin-top: 50px;
+  }
+}

@@ -55,3 +55,35 @@
       font-size: 24px;
     }
 }
+
+@media (min-width: 768px) {
+  .main-header__img {
+    width: 105px;
+  }
+
+  .main-header__img-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+
+    p {
+      text-align: left;
+    }
+  }
+  .main-header__img-description {
+    width: auto;
+  }
+
+  .main-header__img-description-wrapper {
+    margin-left: 30px;
+    margin-right: 40px;
+  }
+
+  .main-header {
+    display: flex;
+    padding-bottom: 20px;
+    align-items: center;
+  }
+
+
+}

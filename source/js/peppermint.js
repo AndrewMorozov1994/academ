@@ -8,7 +8,7 @@
  */
 
 //  Special Slider
-var sliderSpecial = Peppermint(document.getElementById('peppermint'), {
+const sliderSpecial = Peppermint(document.getElementById('peppermint'), {
   onSlideChange: (n) => {
     if (n < 9) {
       sliderSpecialActive.textContent = '0' + (n + 1) + ' / ';
@@ -28,11 +28,16 @@ var sliderSpecialNextBtn = document.querySelector('.special__btn--next');
 var sliderSpecialBackBtn = document.querySelector('.special__btn--back');
 var sliderSpecialLenght = document.querySelector('.special__number-lenght');
 var sliderSpecialActive = document.querySelector('.special__number-active');
+const sliderSpecialWidth = document.querySelector('.special__list.peppermint.peppermint-active');
 sliderSpecialNextBtn.addEventListener('click', sliderSpecial.next, false);
 sliderSpecialBackBtn.addEventListener('click', sliderSpecial.prev, false);
 
 // Slider TOP
 var sliderTop = Peppermint(document.getElementById('slider-top'));
+var sliderTopNextBtn = document.querySelector('.slider__btn--next');
+var sliderTopBackBtn = document.querySelector('.slider__btn--back');
+sliderTopNextBtn.addEventListener('click', sliderTop.next, false);
+sliderTopBackBtn.addEventListener('click', sliderTop.prev, false);
 
 // Slider People
 var sliderPeople = Peppermint(document.getElementById('slider-people'), {
@@ -60,6 +65,7 @@ sliderPeopleBackBtn.addEventListener('click', sliderPeople.prev, false);
 
 // Slider Reviews
 var sliderReviews = Peppermint(document.getElementById('slider-reviews'));
+const sliderReviewsWidth = document.querySelector('.reviews__list.peppermint.peppermint-active');
 
 // Slider News
 var sliderNews = Peppermint(document.getElementById('slider-news'), {
@@ -82,8 +88,31 @@ var sliderNewsNextBtn = document.querySelector('.news__btn--next');
 var sliderNewsBackBtn = document.querySelector('.news__btn--back');
 var sliderNewsLenght = document.querySelector('.news__number-lenght');
 var sliderNewsActive = document.querySelector('.news__number-active');
+const sliderNewsWidth = document.querySelector('.news__list.peppermint.peppermint-active');
 sliderNewsNextBtn.addEventListener('click', sliderNews.next, false);
 sliderNewsBackBtn.addEventListener('click', sliderNews.prev, false);
+
+
+
+var changeWidthSlider = (sliderWidth) => {
+  if (window.matchMedia("(min-width: 1170px)").matches) {
+    sliderWidth.style.paddingRight = 75 + '%';
+  } else if (window.matchMedia("(min-width: 768px)").matches) {
+    sliderWidth.style.paddingRight = 50 + '%';
+  } else {
+    sliderWidth.style.paddingRight = 0;
+  }
+};
+
+changeWidthSlider(sliderSpecialWidth);
+changeWidthSlider(sliderReviewsWidth);
+changeWidthSlider(sliderNewsWidth);
+
+
+
+
+
+
 
 function Peppermint(_this, options) {
     var slider = {
@@ -505,6 +534,7 @@ function Peppermint(_this, options) {
         addEvent(window, 'resize', onWidthChange);
         addEvent(window, 'orientationchange', onWidthChange);
 
+
         //init first slide, timeout to expose the API first
         setTimeout(function() {
             changeActiveSlide(o.startSlide, 0);
@@ -556,6 +586,8 @@ function Peppermint(_this, options) {
         //invoke this when the slider's width is changed
         recalcWidth: onWidthChange
     };
+
+
 };
 
 //if jQuery is present -- create a plugin
@@ -792,4 +824,6 @@ function EventBurrito(_this, options) {
             }
         }
     }
+
 }
+

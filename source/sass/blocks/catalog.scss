@@ -66,3 +66,24 @@
       background-image: url("../img/arrow_right_white.png");
     }
 }
+
+@media (min-width: 768px) {
+  .catalog__description {
+    width: 80%;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .catalog__item {
+    margin-bottom: 0;
+    &:not(:last-child) {
+      width: 50%;
+    }
+    &:last-child {
+      min-height: 250px;
+    }
+  }
+}

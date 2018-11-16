@@ -26,9 +26,16 @@ body {
   padding: 0;
   position: relative;
   color: #6c6c6c;
+
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+@media (min-width: 1170px) {
+  body {
+    overflow-x: hidden;
+  }
 }

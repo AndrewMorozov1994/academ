@@ -112,3 +112,28 @@
   }
 }
 
+@media (min-width: 768px) {
+  .about-us__description {
+    width: 80%;
+  }
+
+  .about-us__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-us__item {
+    width: 50%;
+  }
+
+  .about-us__contact-item {
+    &:last-child {
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+
+  .about-us__contact-item-request {
+    width: 50%;
+  }
+}

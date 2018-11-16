@@ -52,3 +52,9 @@
     background-image: url("../img/yt.png");
   }
 }
+
+@media (min-width: 768px) {
+  .copyright {
+    width: 50%;
+  }
+}
