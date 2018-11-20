@@ -80,7 +80,7 @@ gulp.task(`serve`, [`assemble`], () => {
     ui: false
   });
 
-  gulp.watch(`sass/**/*.{scss,sass}`, [`style`]);
+  gulp.watch(`source/sass/**/*.{scss,sass}`, [`style`]);
   gulp.watch(`source/*.html`).on(`change`, (e) => {
     if (e.type !== `deleted`) {
       gulp.run(`copy-html`);

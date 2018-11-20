@@ -5,4 +5,3 @@ export const data = {
   "type": "FeatureCollection",
   "features": fillArray()
 }
-

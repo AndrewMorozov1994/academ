@@ -72,3 +72,54 @@
     top: 140px;
   }
 }
+
+@media (min-width: 1170px) {
+  .main-menu {
+    order: 0;
+    width: 100%;
+  }
+
+  .main-menu__btn--open {
+    display: none;
+  }
+
+  .main_menu__item-link {
+    position: relative;
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: "";
+      right: -20px;
+      top: 7px;
+      width: 9px;
+      height: 6px;
+      background: no-repeat center url("../img/arrown_down.png");
+    }
+  }
+
+  .main-menu__list {
+    position: relative;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &::after {
+      display: block;
+      width: 1000%;
+      height: 0;
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: -50%;
+      border-bottom: 1px solid #818181;
+    }
+  }
+
+  .main-menu__item {
+    &:last-child {
+      margin-right: 20px;
+    }
+  }
+}
