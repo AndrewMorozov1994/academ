@@ -137,3 +137,114 @@
     width: 50%;
   }
 }
+
+@media (min-width: 1170px) {
+
+  .about-us-wrapper {
+    background-color: #ebfff3;
+    margin-top: -70px;
+    padding-bottom: 70px;
+  }
+
+  .about-us__title {
+    padding-top: 140px;
+    width: 40%;
+    margin: 0;
+  }
+  .about-us__description {
+    display: block;
+    font-size: 20px;
+    color: #6c6c6c;
+    margin: 0;
+    margin-bottom: 40px;
+    width: 60%;
+    text-align: left;
+  }
+
+  .about-us__list {
+    max-width: 1170px;
+    margin: 0 auto;
+    align-items: flex-start;
+
+  }
+
+  .about-us__contact-list {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: -70px;
+  }
+
+  .about-us__contact-item {
+    min-width: 50%;
+    min-height: 250px;
+    &:last-child {
+      flex-direction: column;
+    }
+  }
+  .about-us__contact-item-request {
+    width: 100%;
+    align-items: flex-start;
+    position: relative;
+    min-height: 250px;
+  }
+
+  .about-us__contact-item-title {
+    text-align: left;
+    margin-left: 150px;
+    position: relative;
+    &::before {
+      position: absolute;
+      left: -100px;
+      top: -20px;
+    }
+  }
+
+  .about-us__contact-item-description {
+    text-align: left;
+    margin-left: 150px;
+
+    &--adress {
+      margin-left: 0;
+    }
+  }
+
+  .about-us__contact-item-btn {
+    display: block;
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+
+  }
+
+  .about-us__item-description {
+    display: block;
+    width: 200px;
+    text-align: left;
+    padding-left: 150px;
+    position: relative;
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 80px;
+      height: 100px;
+      background-position: center;
+      background-repeat: no-repeat;
+      left: 30px;
+    }
+
+    &--00::before {
+      background-image: url("../img/about_icon_00.png");
+    }
+    &--01::before {
+      background-image: url("../img/about_icon_01.png");
+    }
+    &--02::before {
+      background-image: url("../img/about_icon_02.png");
+    }
+    &--03::before {
+      background-image: url("../img/about_icon_03.png");
+    }
+  }
+}

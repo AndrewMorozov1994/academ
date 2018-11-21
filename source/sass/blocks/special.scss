@@ -152,18 +152,25 @@
 
   .special__btn-wrapper {
     max-width: 1170px;
+    width: 1170px;
     margin: 0 auto;
     justify-content: flex-end;
-    position: relative;
-    top: -660px
+    position: absolute;
+    top: 0;
+
   }
 
   .special {
     max-width: 1920px;
     margin: 0 auto;
+    position: relative;
   }
 
   .special__list {
     width: 25%;
+  }
+
+  .special__all-btn {
+    margin-top: 40px;
   }
 }
