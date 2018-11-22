@@ -86,3 +86,39 @@
     width: 50%;
   }
 }
+
+
+@media (min-width: 1170px) {
+  .news__title {
+    padding-top: 140px;
+    width: 40%;
+    margin: 0;
+  }
+  .news__description {
+    display: block;
+    font-size: 20px;
+    color: #6c6c6c;
+    margin: 0;
+    margin-bottom: 40px;
+    width: 60%;
+    text-align: left;
+  }
+
+  .news__list {
+    width: 25%;
+  }
+
+  .news {
+    position: relative;
+  }
+
+  .news__btn-wrapper {
+    background-color: transparent;
+    position: absolute;
+    top: 140px;
+    margin: 0 auto;
+    width: 1170px;
+    justify-content: flex-end;
+
+  }
+}

@@ -137,3 +137,104 @@
     width: 80%;
   }
 }
+
+@media (min-width: 1170px) {
+  .people__list {
+    max-width: 1170px;
+    background-color: transparent;
+  }
+
+  .people {
+    margin-top: -71px;
+    position: relative;
+  }
+
+  .people__btn-wrapper {
+    background-color: transparent;
+    position: absolute;
+    top: 140px;
+    margin: 0 auto;
+    width: 1170px;
+    justify-content: flex-end;
+
+  }
+
+  .people__item {
+    padding-top: 0;
+  }
+
+  .people__title {
+    padding-top: 140px;
+    width: 40%;
+    margin: 0;
+  }
+  .people__description {
+    display: block;
+    font-size: 20px;
+    color: #6c6c6c;
+    margin: 0;
+    margin-bottom: 40px;
+    width: 60%;
+    text-align: left;
+  }
+
+  .people__item-wrapper {
+    border: 5px solid #32b86b;
+    position: relative;
+    max-width: 1000px;
+    background-color: white;
+  }
+
+  .people__item-img {
+    max-width: 440px;
+    position: absolute;
+    top: 30px;
+    right: -140px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .people__item-name {
+    width: auto;
+    margin: 0;
+    text-align: left;
+    padding-left: 80px;
+    padding-top: 90px;
+    font-size: 26px;
+  }
+
+  .people__item-position {
+    margin: 0;
+    text-align: left;
+    margin-left: 80px;
+    max-width: 340px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    border-bottom: 1px solid #e2e2e2;
+  }
+
+  .people__item-phone {
+    margin: 0;
+    text-align: left;
+    margin-left: 80px;
+    width: auto;
+    justify-content: flex-start;
+    margin-top: 40px;
+  }
+
+  .people__item-email {
+    margin: 0;
+    text-align: left;
+    margin-left: 80px;
+    width: auto;
+    justify-content: flex-start;
+  }
+
+  .people__item-description {
+    margin: 0;
+    text-align: left;
+    margin-left: 80px;
+    max-width: 400px;
+    margin-top: 40px;
+    padding-bottom: 90px;
+  }
+}

@@ -39,7 +39,7 @@ var data = (function (exports) {
 
   // {
   //   "type": "Feature",
-  //   id = 0,
+  //   "id" = 0,
   //   "geometry": {
   //     "type": "Point",
   //     "coordinates": [55.858585, 37.48498],

@@ -13,11 +13,11 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/style.css">
   <title>ЦН “Академический”</title>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=<bfdf0586-3c44-47af-9070-a91f11ab6a8a>&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=bfdf0586-3c44-47af-9070-a91f11ab6a8a&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
   <header class="main-header">
-    <div class="main-header__wrapper">
       <div class="main-header__img-wrapper">
         <img class="main-header__img" src="img/logo.png" alt="Логотип">
         <div class="main-header__img-description-wrapper">
@@ -26,7 +26,6 @@
           <p class="main-header__img-description">Качество проверенное временем</p>
         </div>
       </div>
-    </div>
     <nav class="main-menu">
       <button class="main-menu__btn main-menu__btn--open"><span class="visually-hidden">Меню</span></button>
       <ul class="main-menu__list list-style-none">
@@ -229,22 +228,26 @@
       </ul>
     </section>
     <section class="about-us">
-      <h2 class="about-us__title main-title">центр недвижимости “Академический”</h2>
-      <p class="about-us__description">Наша миссия создать комфортные и безопасные условия продажи и покупки, как вторичной, так и первичной недвижимости!</p>
-      <ul class="about-us__list list-style-none">
-        <li class="about-us__item">
-          <p class="about-us__item-description">средний опыт работы наших сотрудников<span class="color-green"> 10 </span>лет</p>
-        </li>
-        <li class="about-us__item">
-          <p class="about-us__item-description">работаем с<span class="color-green"> 71 </span> застройщиком</p>
-        </li>
-        <li class="about-us__item">
-          <p class="about-us__item-description">более<span class="color-green"> 9 755 </span>квартир в базе вторичного жилья</p>
-        </li>
-        <li class="about-us__item">
-          <p class="about-us__item-description">более<span class="color-green"> 16 528 </span>квартир в новостройках</p>
-        </li>
-      </ul>
+      <div class="about-us-wrapper">
+        <div class="main-title-wrapper">
+          <h2 class="about-us__title main-title">центр недвижимости “Академический”</h2>
+          <p class="about-us__description">Наша миссия создать комфортные и безопасные условия продажи и покупки, как вторичной, так и первичной недвижимости!</p>
+        </div>
+        <ul class="about-us__list list-style-none">
+          <li class="about-us__item ">
+            <p class="about-us__item-description about-us__item-description--00">средний опыт работы наших сотрудников<span class="color-green"> 10 </span>лет</p>
+          </li>
+          <li class="about-us__item">
+            <p class="about-us__item-description about-us__item-description--01">работаем с<span class="color-green"> 71 </span> застройщиком</p>
+          </li>
+          <li class="about-us__item">
+            <p class="about-us__item-description about-us__item-description--02">более<span class="color-green"> 9 755 </span>квартир в базе вторичного жилья</p>
+          </li>
+          <li class="about-us__item">
+            <p class="about-us__item-description about-us__item-description--03">более<span class="color-green"> 16 528 </span>квартир в новостройках</p>
+          </li>
+        </ul>
+      </div>
       <ul class="about-us__contact-list list-style-none">
         <li class="about-us__contact-item about-us__contact-item--00">
           <p class="about-us__contact-item-description about-us__contact-item-description--adress">всегда рады нашим клиентам в офисе на ул. Краснолесья, 93</p>
@@ -264,29 +267,34 @@
       </ul>
     </section>
     <section class="people">
-      <h2 class="people__title main-title">наши агенты по недвижимости</h2>
-      <p class="people__description">В нашем штате более 20 специалистов</p>
-
+      <div class="main-title-wrapper">
+        <h2 class="people__title main-title">наши агенты по недвижимости</h2>
+        <p class="people__description">В нашем штате более 20 специалистов</p>
+      </div>
       <ul class="people__list peppermint list-style-none" id="slider-people">
         <li class="people__item">
-          <div class="people__item-img">
-            <img src="img/images.jpeg" alt="Фото">
+          <div class="people__item-wrapper">
+            <div class="people__item-img">
+              <img src="img/images.jpeg" alt="Фото">
+            </div>
+            <p class="people__item-name">Зыкова Зоя захаровна</p>
+            <p class="people__item-position">Специалист по недвижимости</p>
+            <a class="people__item-phone" href="tel:+79009002020">+7 (908) 90-35-895</a>
+            <a class="people__item-email" href="mailto:e1@e1.ru">cn-akadem@mail.ru </a>
+            <p class="people__item-description">Образование высшее. Стаж 16 лет. Любые операции с недвижимостью, профессионально, безопасно, корректно. Многолетний опыт гарантирует возможность избежать “подводные камни” на сделках с недвижимостью. </p>
           </div>
-          <p class="people__item-name">Зыкова Зоя захаровна</p>
-          <p class="people__item-position">Специалист по недвижимости</p>
-          <a class="people__item-phone" href="tel:+79009002020">+7 (908) 90-35-895</a>
-          <a class="people__item-email" href="mailto:e1@e1.ru">cn-akadem@mail.ru </a>
-          <p class="people__item-description">Образование высшее. Стаж 16 лет. Любые операции с недвижимостью, профессионально, безопасно, корректно. Многолетний опыт гарантирует возможность избежать “подводные камни” на сделках с недвижимостью. </p>
         </li>
         <li class="people__item">
-          <div class="people__item-img">
-            <img src="img/images.jpeg" alt="Фото">
+          <div class="people__item-wrapper">
+            <div class="people__item-img">
+              <img src="img/images.jpeg" alt="Фото">
+            </div>
+            <p class="people__item-name">Зыкова Зоя захаровна</p>
+            <p class="people__item-position">Специалист по недвижимости</p>
+            <a class="people__item-phone" href="tel:+79009002020">+7 (908) 90-35-895</a>
+            <a class="people__item-email" href="mailto:e1@e1.ru">cn-akadem@mail.ru </a>
+            <p class="people__item-description">Образование высшее. Стаж 16 лет. Любые операции с недвижимостью, профессионально, безопасно, корректно. Многолетний опыт гарантирует возможность избежать “подводные камни” на сделках с недвижимостью. </p>
           </div>
-          <p class="people__item-name">Зыкова Зоя захаровна</p>
-          <p class="people__item-position">Специалист по недвижимости</p>
-          <a class="people__item-phone" href="tel:+79009002020">+7 (908) 90-35-895</a>
-          <a class="people__item-email" href="mailto:e1@e1.ru">cn-akadem@mail.ru </a>
-          <p class="people__item-description">Образование высшее. Стаж 16 лет. Любые операции с недвижимостью, профессионально, безопасно, корректно. Многолетний опыт гарантирует возможность избежать “подводные камни” на сделках с недвижимостью. </p>
         </li>
       </ul>
       <div class="people__btn-wrapper">
@@ -296,8 +304,10 @@
       </div>
     </section>
     <section class="reviews">
-      <h2 class="reviews__title main-title">Отзывы</h2>
-      <p class="reviews__description">Просто почитайте, что говорят о нас наши клиенты</p>
+      <div class="main-title-wrapper">
+        <h2 class="reviews__title main-title">Отзывы</h2>
+        <p class="reviews__description">Просто почитайте, что говорят о нас наши клиенты</p>
+      </div>
       <ul class="reviews__list peppermint list-style-none" id="slider-reviews">
         <li class="reviews__item">
           <div class="reviews__item-img"><img src="img/review_00.jpg" alt="Отзыв"></div>
@@ -322,9 +332,27 @@
       </div>
     </section>
     <section class="news">
-      <h2 class="news__title main-title">Новости</h2>
-      <p class="news__description">Последние новости нашего агентства</p>
+      <div class="main-title-wrapper">
+        <h2 class="news__title main-title">Новости</h2>
+        <p class="news__description">Последние новости нашего агентства</p>
+      </div>
       <ul class="news__list peppermint list-style-none" id="slider-news">
+        <li class="news__item">
+          <div class="news__item-img">
+            <img src="img/news.jpg" alt="Фото">
+          </div>
+          <p class="news__item-date">3 сентября 2018 г</p>
+          <a class="news__item-title" href="#"><span>5 новых объектов в каталоге</span></a>
+          <p class="news__item-description">Центр недвижимости основан группой риелторов с опытом работы более 15 лет</p>
+        </li>
+        <li class="news__item">
+          <div class="news__item-img">
+            <img src="img/news.jpg" alt="Фото">
+          </div>
+          <p class="news__item-date">3 сентября 2018 г</p>
+          <a class="news__item-title" href="#"><span>5 новых объектов в каталоге</span></a>
+          <p class="news__item-description">Центр недвижимости основан группой риелторов с опытом работы более 15 лет</p>
+        </li>
         <li class="news__item">
           <div class="news__item-img">
             <img src="img/news.jpg" alt="Фото">
@@ -392,7 +420,7 @@
     </div>
   </footer>
   <script src="js/menu.js"></script>
-  <!-- <script src="js/map.js"></script> -->
+  <script src="js/map.js"></script>
   <script src="js/peppermint.js"></script>
 </body>
 </html>

@@ -32,3 +32,29 @@
     width: 80%;
   }
 }
+
+@media (min-width: 1170px) {
+  .reviews__list {
+    width: 25%;
+  }
+
+  .reviews {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  .reviews__title {
+    padding-top: 80px;
+    width: 40%;
+    margin: 0;
+  }
+  .reviews__description {
+    display: block;
+    font-size: 20px;
+    color: #6c6c6c;
+    margin: 0;
+    margin-bottom: 40px;
+    width: 60%;
+    text-align: left;
+  }
+}

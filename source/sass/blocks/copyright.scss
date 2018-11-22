@@ -58,3 +58,22 @@
     width: 50%;
   }
 }
+
+@media (min-width: 1170px) {
+  .copyright {
+    width: auto;
+    order: 1;
+  }
+
+  .copyright__title {
+    text-align: left;
+  }
+
+  .copyright__description {
+    text-align: left;
+  }
+
+  .copyright__list {
+    margin-left: 0;
+  }
+}

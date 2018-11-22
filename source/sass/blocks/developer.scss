@@ -12,3 +12,11 @@
   bottom: 0;
   left: 65px;
 }
+
+@media (min-width: 1170px) {
+  .developer {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+  }
+}

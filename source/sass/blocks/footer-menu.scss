@@ -70,3 +70,30 @@
     padding-top: 50px;
   }
 }
+
+@media (min-width: 1170px) {
+  .footer-menu {
+    width: auto;
+    order: 2;
+  }
+
+  .footer__contact-list {
+    width: auto;
+    order: 3;
+  }
+
+  .footer-menu__item {
+    height: auto;
+    a {
+      text-align: left;
+      padding-top: 0;
+    }
+  }
+
+  .footer__contact-item {
+    align-items: flex-end;
+    &:first-child {
+      display: none;
+    }
+  }
+}
