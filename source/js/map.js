@@ -10,12 +10,7 @@ ymaps.ready(() => {
   }),
   objectManager = new ymaps.ObjectManager({
     clusterize: true,
-    geoObjectOpenBalloonOnClick: false,
-    clusterOpenBalloonOnClick: false,
-    clusterBalloonContentLayoutWidth: 380,
-     clusterBalloonContentLayoutHeight: 140,
-    geoObjectBalloonContentLayoutWidth: 380,
-  geoObjectBalloonContentLayoutHeight: 120
+    geoObjectOpenBalloonOnClick: false
   });
 
   // Кастомные иконки
@@ -50,7 +45,7 @@ ymaps.ready(() => {
           obj = objectManager.objects.getById(objectId);
       if (hasBalloonData(objectId)) {
           objectManager.objects.balloon.open(objectId);
-
+          // objectManager.clusters.balloon.open(objectId);
       } else {
           obj.properties.balloonContent = "Идет загрузка данных...";
           objectManager.objects.balloon.open(objectId);
@@ -83,8 +78,8 @@ ymaps.ready(() => {
   // Нужно перепилить под загрузку с сервера
   $.ajax({
     url: "https://089ax.000webhostapp.com/data.json"
-}).done((data) => {
-    objectManager.add(data);
-});
+  }).done((data) => {
+      objectManager.add(data);
+    });
 
 });
