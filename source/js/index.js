@@ -32,6 +32,7 @@ $specialItemSliders.each(function() {
   $(this).slick({
     arrows: true,
     draggable: false,
+    swipe: false,
     appendArrows: $(this).parents('.special__item').find('.special__item-hover-wrapper'),
     prevArrow: '<button class="special__item-btn arrow-btn special__item-btn--back"><span class="visually-hidden">Назад</span></button>',
     nextArrow: '<button class="special__item-btn arrow-btn special__item-btn--next"><span class="visually-hidden">Вперел</span></button>'
