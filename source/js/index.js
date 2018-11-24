@@ -4,6 +4,7 @@ const sliderPagination = (element, current, count) => {
     var i = (currentSlide ? currentSlide : 0) + 1;
     current.text('0' + i + '/ ');
     count.text('0' + slick.slideCount);
+    return false;
   });
 }
 
@@ -23,6 +24,25 @@ const getSliderLength = (slider, length) => {
 };
 getSliderLength(her, her2);
 
+// Блок Special, слайдеры внутри слайдера
+
+const $specialItemSliders = $('.special__item-img-wrapper');
+
+$specialItemSliders.each(function() {
+  $(this).slick({
+    arrows: true,
+    draggable: false,
+    appendArrows: $(this).parents('.special__item').find('.special__item-hover-wrapper'),
+    prevArrow: '<button class="special__item-btn arrow-btn special__item-btn--back"><span class="visually-hidden">Назад</span></button>',
+    nextArrow: '<button class="special__item-btn arrow-btn special__item-btn--next"><span class="visually-hidden">Вперел</span></button>'
+  });
+  const item = $(this).parents('.special__item').find('.special__item-number');
+  const ite = $(this).parents('.special__item').find('.special__item-number1');
+  sliderPagination($(this), item, ite);
+})
+
+//
+
 // SPECIAL SLIDER
 const $slickElement = $('.special__list');
 const $current = $('.special__number-active');
@@ -34,9 +54,9 @@ $('.special__list').slick({
   nextArrow: '<button class="special__btn arrow-btn special__btn--next"><span class="visually-hidden">Вперед</span></button>',
   prevArrow: '<button class="special__btn arrow-btn special__btn--back"><span class="visually-hidden">Назад</span></button>',
   dots: true,
+  infinite: false,
   slidesToShow: 4,
   slidesToScroll: 1,
-  focusOnSelect: true,
   responsive: [
     {
       breakpoint: 1070,
@@ -49,7 +69,8 @@ $('.special__list').slick({
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        infinite: true
       }
     }]
 
