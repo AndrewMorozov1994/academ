@@ -139,12 +139,12 @@
   .slider__item {
     min-height: 490px;
     text-align: left;
-    &:nth-child(2) {
+    &--01 {
       .slider__text-inner {
         margin-left: 120px;
       }
     }
-    &:last-child {
+    &--02 {
       .slider__text-inner {
         margin-left: 250px;
       }

@@ -7,6 +7,22 @@ const sliderPagination = (element, current, count) => {
   });
 }
 
+var her = document.querySelector('.special__list');
+
+var her2 = document.querySelector('.special__number-lenght');
+
+
+const getSliderLength = (slider, length) => {
+  const sliderItem = slider.querySelectorAll('li');
+  console.log(sliderItem.length);
+  if (sliderItem.length <= 9) {
+    length.innerHTML = '0' + sliderItem.length;
+  } else {
+    length.innerHTML = sliderItem.length;
+  }
+};
+getSliderLength(her, her2);
+
 // SPECIAL SLIDER
 const $slickElement = $('.special__list');
 const $current = $('.special__number-active');
@@ -126,4 +142,4 @@ $sliderList.slick({
   prevArrow: '<button class="slider__btn arrow-btn slider__btn--back"><span class="visually-hidden">Назад</span></button>',
   nextArrow: '<button class="slider__btn arrow-btn slider__btn--next"><span class="visually-hidden">Вперед</span></button>',
 })
-// 
+//

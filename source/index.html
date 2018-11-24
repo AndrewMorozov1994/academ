@@ -104,8 +104,8 @@
         </ul>
 
         <div class="slider__btn-wrapper">
-          <button class="slider__btn arrow-btn slider__btn--back"><span class="visually-hidden">Назад</span></button>
-          <button class="slider__btn arrow-btn slider__btn--next"><span class="visually-hidden">Вперед</span></button>
+          <!-- <button class="slider__btn arrow-btn slider__btn--back"><span class="visually-hidden">Назад</span></button>
+          <button class="slider__btn arrow-btn slider__btn--next"><span class="visually-hidden">Вперед</span></button> -->
         </div>
       </div>
     </section>
@@ -189,11 +189,30 @@
             <p class="special__price"><span class="color-green">3 400 000</span> р.</p>
           </div>
         </li>
+        <li class="special__item">
+          <div class="special__item-img-wrapper">
+            <img class="special__item-img" src="img/special_00.jpg" alt="Фото">
+            <p class="special__item-new">Новинка</p>
+          </div>
+          <div class="special__item-hover-wrapper">
+            <button class="special__item-btn arrow-btn special__item-btn--back"><span class="visually-hidden">Назад</span></button>
+            <button class="special__item-btn arrow-btn special__item-btn--next"><span class="visually-hidden">Вперел</span></button>
+            <p class="special__item-photo"><span class="special__item-number color-green">3</span> фото из <span class="special__item-number color-green">12</span> </p>
+          </div>
+          <div class="special__item-description-wrapper">
+            <div class="special__name-wrapper">
+              <a class="special__name" href="#"><span>3-К Квартира</span></a>
+              <p><span class="color-green">52</span> м2. <span class="color-green">6/8</span> эт.</p>
+            </div>
+            <p class="special__adress">Академический, Краснолесья 103</p>
+            <p class="special__price"><span class="color-green">3 400 000</span> р.</p>
+          </div>
+        </li>
       </ul>
       <div class="special__btn-wrapper">
-        <button class="special__btn arrow-btn special__btn--back"><span class="visually-hidden">Назад</span></button>
+        <!-- <button class="special__btn arrow-btn special__btn--back"><span class="visually-hidden">Назад</span></button> -->
         <p class="special__number"><span class="color-green special__number-active">01 / </span><span class="special__number-lenght"> 04</span></p>
-        <button class="special__btn arrow-btn special__btn--next"><span class="visually-hidden">Вперед</span></button>
+        <!-- <button class="special__btn arrow-btn special__btn--next"><span class="visually-hidden">Вперед</span></button> -->
       </div>
       <button class="special__all-btn main-btn">Посмотреть все объекты</button>
     </section>
@@ -298,9 +317,9 @@
         </li>
       </ul>
       <div class="people__btn-wrapper">
-        <button class="people__btn arrow-btn people__btn--back"><span class="visually-hidden">Назад</span></button>
-        <p class="people__number"><span class="color-green people__number-active">01 / </span><span class="people__number-lenght">04</span></p>
-        <button class="people__btn arrow-btn people__btn--next"><span class="visually-hidden">Вперед</span></button>
+        <!-- <button class="people__btn arrow-btn people__btn--back"><span class="visually-hidden">Назад</span></button> -->
+        <p class="people__number"><span class="color-green people__number-active">01 / </span><span class="people__number-lenght">02</span></p>
+        <!-- <button class="people__btn arrow-btn people__btn--next"><span class="visually-hidden">Вперед</span></button> -->
       </div>
     </section>
     <section class="reviews">
@@ -320,6 +339,9 @@
         </li>
         <li class="reviews__item">
           <div class="reviews__item-img"><img src="img/review_03.jpg" alt="Отзыв"></div>
+        </li>
+        <li class="reviews__item">
+          <div class="reviews__item-img"><img src="img/review_02.jpg" alt="Отзыв"></div>
         </li>
       </ul>
     </section>
@@ -369,11 +391,19 @@
           <a class="news__item-title" href="#"><span>5 новых объектов в каталоге</span></a>
           <p class="news__item-description">Центр недвижимости основан группой риелторов с опытом работы более 15 лет</p>
         </li>
+        <li class="news__item">
+          <div class="news__item-img">
+            <img src="img/news.jpg" alt="Фото">
+          </div>
+          <p class="news__item-date">3 сентября 2018 г</p>
+          <a class="news__item-title" href="#"><span>5 новых объектов в каталоге</span></a>
+          <p class="news__item-description">Центр недвижимости основан группой риелторов с опытом работы более 15 лет</p>
+        </li>
       </ul>
       <div class="news__btn-wrapper">
-        <button class="news__btn arrow-btn news__btn--back"><span class="visually-hidden">Назад</span></button>
-        <p class="news__number"><span class="color-green news__number-active">01 / </span><span class="news__number-lenght">04</span></p>
-        <button class="news__btn arrow-btn news__btn--next"><span class="visually-hidden">Вперед</span></button>
+        <!-- <button class="news__btn arrow-btn news__btn--back"><span class="visually-hidden">Назад</span></button> -->
+        <p class="news__number"><span class="color-green news__number-active">01 / </span><span class="news__number-lenght">05</span></p>
+        <!-- <button class="news__btn arrow-btn news__btn--next"><span class="visually-hidden">Вперед</span></button> -->
       </div>
     </section>
     <section class="map" id="map">
@@ -419,8 +449,11 @@
       </section>
     </div>
   </footer>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/index.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/map.js"></script>
-  <script src="js/peppermint.js"></script>
 </body>
 </html>
