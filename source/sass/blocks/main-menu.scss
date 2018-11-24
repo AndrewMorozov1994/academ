@@ -30,17 +30,13 @@
 .main-menu__sub-list {
   display: none;
   background-color: #ebfff3;
+  position: absolute;
 }
 
 .main-menu__item {
   padding-top: 20px;
   padding-bottom: 20px;
   min-height: 20px;
-    &:hover {
-      .main-menu__sub-list {
-        display: block;
-      }
-    }
 }
 
 .main-menu__btn {
@@ -85,16 +81,22 @@
 
   .main_menu__item-link {
     position: relative;
+    padding: 20px 0;
 
     &::after {
       display: block;
       position: absolute;
+      pointer-events: none;
       content: "";
       right: -20px;
-      top: 7px;
+      top: 25px;
       width: 9px;
       height: 6px;
       background: no-repeat center url("../img/arrown_down.png");
+    }
+
+    &:hover {
+      color: #43aa58;
     }
   }
 
@@ -114,12 +116,42 @@
       bottom: 0;
       left: -50%;
       border-bottom: 1px solid #818181;
+      pointer-events: none;
     }
   }
 
   .main-menu__item {
     &:last-child {
       margin-right: 20px;
+    }
+
+    &:hover {
+      .main_menu__item-link {
+        color: #43aa58;
+      }
+      & > .main-menu__sub-list {
+        display: block;
+      }
+    }
+  }
+
+  .main-menu__sub-list {
+    width: 400px;
+    z-index: 1;
+    top: 65px;
+  }
+
+  .main-menu__sub-item {
+    border-bottom: 1px solid #818181;
+
+    &:hover {
+      a {
+        color: #43aa58;
+      }
+    }
+
+    a {
+      display: block;
     }
   }
 }

@@ -533,14 +533,13 @@ a {
 
 .main-menu__sub-list {
   display: none;
-  background-color: #ebfff3; }
+  background-color: #ebfff3;
+  position: absolute; }
 
 .main-menu__item {
   padding-top: 20px;
   padding-bottom: 20px;
   min-height: 20px; }
-  .main-menu__item:hover .main-menu__sub-list {
-    display: block; }
 
 .main-menu__btn {
   width: 50px;
@@ -574,16 +573,20 @@ a {
   .main-menu__btn--open {
     display: none; }
   .main_menu__item-link {
-    position: relative; }
+    position: relative;
+    padding: 20px 0; }
     .main_menu__item-link::after {
       display: block;
       position: absolute;
+      pointer-events: none;
       content: "";
       right: -20px;
-      top: 7px;
+      top: 25px;
       width: 9px;
       height: 6px;
       background: no-repeat center url("../img/arrown_down.png"); }
+    .main_menu__item-link:hover {
+      color: #43aa58; }
   .main-menu__list {
     position: relative;
     top: 0;
@@ -602,13 +605,32 @@ a {
       content: "";
       bottom: 0;
       left: -50%;
-      border-bottom: 1px solid #818181; }
+      border-bottom: 1px solid #818181;
+      pointer-events: none; }
   .main-menu__item:last-child {
-    margin-right: 20px; } }
+    margin-right: 20px; }
+  .main-menu__item:hover .main_menu__item-link {
+    color: #43aa58; }
+  .main-menu__item:hover > .main-menu__sub-list {
+    display: block; }
+  .main-menu__sub-list {
+    width: 400px;
+    z-index: 1;
+    top: 65px; }
+  .main-menu__sub-item {
+    border-bottom: 1px solid #818181; }
+    .main-menu__sub-item:hover a {
+      color: #43aa58; }
+    .main-menu__sub-item a {
+      display: block; } }
 
 .map {
-  width: 1000px;
-  height: 600px; }
+  width: 100%;
+  height: 300px; }
+
+@media (min-width: 1170px) {
+  .map {
+    height: 500px; } }
 
 .color-green {
   color: #42ab59;

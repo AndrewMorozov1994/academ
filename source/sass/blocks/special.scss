@@ -77,7 +77,7 @@
 }
 
 .special__item-img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .special__item-new {
@@ -127,7 +127,7 @@
 
 @media (min-width: 768px) {
   .special__list {
-    width: 50%;
+    width: 100%;
   }
 
   .special__all-btn {
@@ -167,7 +167,7 @@
   }
 
   .special__list {
-    width: 25%;
+    width: 100%;
   }
 
   .special__all-btn {
