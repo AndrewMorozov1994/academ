@@ -75,6 +75,17 @@
   .footer-menu {
     width: auto;
     order: 2;
+    position: relative;
+    &::before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 1px;
+      background-color: #ededed;
+      height: 200px;
+      top: 50px;
+      left: -100px;
+    }
   }
 
   .footer__contact-list {
@@ -84,9 +95,17 @@
 
   .footer-menu__item {
     height: auto;
+    justify-content: flex-start;
     a {
       text-align: left;
       padding-top: 0;
+      width: auto;
+    }
+    &:hover {
+      span {
+        color: #32b86b;
+        border-bottom: 1px solid #c3e6cf;
+      }
     }
   }
 

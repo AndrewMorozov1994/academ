@@ -93,6 +93,7 @@
     padding-top: 140px;
     width: 40%;
     margin: 0;
+
   }
   .news__description {
     display: block;
@@ -120,5 +121,13 @@
     width: 1170px;
     justify-content: flex-end;
 
+  }
+
+  .news__item-title {
+    &:hover {
+      span {
+        border-bottom: 1px solid #32b86b;
+      }
+    }
   }
 }

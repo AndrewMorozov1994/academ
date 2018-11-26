@@ -1,0 +1,51 @@
+.vacancy {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.vacancy__title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #32b86b;
+}
+
+.vacancy__description {
+  font-size: 22px;
+  font-weight: 700;
+  color: black;
+}
+
+.vacancy-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.vacancy__item {
+  display: block;
+  position: relative;
+  color: #6c6c6c;
+  padding-left: 43px;
+  margin-bottom: 10px;
+  &::before {
+    display: block;
+    content: "";
+    width: 23px;
+    height: 15px;
+    background-image: url("../img/vacancy_arrow.png");
+    position: absolute;
+    top: 5px;
+    left: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .vacancy-wrapper {
+    flex-direction: row;
+  }
+
+  .vacancy-inner {
+    margin-left: 50px;
+  }
+}

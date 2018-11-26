@@ -188,9 +188,16 @@
   .people__item-img {
     max-width: 440px;
     position: absolute;
+    max-height: 470px;
+    background-color: white;
     top: 30px;
     right: -140px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+      img {
+        width: auto;
+        margin: 0 auto;
+        max-height: inherit;
+      }
   }
 
   .people__item-name {
