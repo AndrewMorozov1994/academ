@@ -2388,9 +2388,6 @@ a {
     top: -10px;
     left: -70px; }
 
-.services__img {
-  width: 100%; }
-
 .services__list {
   border-bottom: 1px solid #e2e2e2;
   border-top: 1px solid #e2e2e2;
@@ -2489,3 +2486,179 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+
+.page-404 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/404_background.jpg"); }
+
+.page-404-wrapper {
+  text-align: center;
+  width: 90%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+
+.page-404__title {
+  text-align: center;
+  font-weight: 700;
+  color: #42ab59;
+  font-size: 36px;
+  text-transform: uppercase;
+  margin: 0; }
+
+.page-404__description {
+  font-size: 26px;
+  font-weight: 700;
+  color: white; }
+
+.page-404__text {
+  font-size: 26px;
+  font-weight: 300;
+  color: white; }
+  .page-404__text a {
+    color: #32b86b;
+    border-bottom: 1px solid #32b86b; }
+
+.page-404__form {
+  min-width: 300px;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  position: relative; }
+
+.page-404__search {
+  display: block;
+  position: relative;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  border: none;
+  margin: 0 auto;
+  color: white;
+  padding-left: 50px; }
+
+.page-404-search-label {
+  display: block;
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  z-index: 10;
+  background-image: url("../img/loupe.png"); }
+
+@media (min-width: 1170px) {
+  .page-404-wrapper {
+    padding-bottom: 200px;
+    padding-top: 200px; }
+  .page-404__title {
+    font-size: 46px; } }
+
+.page-news__list {
+  border-bottom: 1px solid #e2e2e2;
+  border-top: 1px solid #e2e2e2;
+  padding-bottom: 0; }
+
+.page-news__item {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1120px;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  padding-top: 20px; }
+  .page-news__item:not(:last-child) {
+    border-bottom: 1px solid #e2e2e2; }
+
+.page-news__item-title {
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #41ac5b;
+  font-weight: 700; }
+  .page-news__item-title:hover span {
+    border-bottom: 1px solid #a2d7b3; }
+
+.page-news__item-description {
+  max-width: 730px; }
+
+.page-news__img {
+  width: 100%; }
+
+.page-news__date {
+  font-size: 18px;
+  color: #666666;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 10px; }
+
+@media (min-width: 768px) {
+  .page-news__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .page-news__img {
+    max-width: 250px;
+    margin-right: 20px; } }
+
+@media (min-width: 1170px) {
+  .page-news__img {
+    max-width: 335px;
+    margin-right: 50px; }
+  .page-news__item {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
+
+.paginator {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto; }
+
+.paginator__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 420px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px; }
+
+.paginator__item:first-child {
+  width: 12px;
+  height: 22px;
+  background-image: url("../img/page-arrow_left.png");
+  cursor: pointer; }
+  .paginator__item:first-child:hover {
+    background-image: url("../img/page-arrow_left-hover.png"); }
+
+.paginator__item:last-child {
+  cursor: pointer;
+  width: 12px;
+  height: 22px;
+  background-image: url("../img/page-arrow_right.png"); }
+  .paginator__item:last-child:hover {
+    background-image: url("../img/page-arrow_right-hover.png"); }
+
+.paginator__link {
+  font-size: 22px;
+  color: black;
+  font-weight: 700;
+  padding: 5px; }
+  .paginator__link:hover {
+    color: #32b86b; }
+  .paginator__link--active {
+    border-bottom: 2px solid #32b86b; }

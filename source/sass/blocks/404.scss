@@ -1,0 +1,82 @@
+.page-404 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/404_background.jpg");
+}
+
+.page-404-wrapper {
+  text-align: center;
+  width: 90%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.page-404__title {
+  text-align: center;
+  font-weight: 700;
+  color: #42ab59;
+  font-size: 36px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.page-404__description {
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+}
+
+.page-404__text {
+  font-size: 26px;
+  font-weight: 300;
+  color: white;
+    a {
+      color: #32b86b;
+      border-bottom: 1px solid #32b86b;
+    }
+}
+.page-404__form {
+  min-width: 300px;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.page-404__search {
+  display: block;
+  position: relative;
+  padding: 20px;
+  background: rgba(0,0,0,0.7);
+  width: 100%;
+  border: none;
+  margin: 0 auto;
+  color: white;
+  padding-left: 50px;
+}
+
+.page-404-search-label {
+  display: block;
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  z-index: 10;
+  background-image: url("../img/loupe.png");
+}
+
+@media (min-width: 1170px) {
+  .page-404-wrapper {
+    padding-bottom: 200px;
+    padding-top: 200px;
+  }
+
+  .page-404__title {
+    font-size: 46px;
+  }
+}
