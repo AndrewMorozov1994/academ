@@ -24,13 +24,22 @@
       margin-left: 10px;
       margin-right: 10px;
     }
+    &:first-child {
+      .navigation__link {
+        color: #43aa58;
+      }
+      span {
+        border-bottom: 1px solid #d8eee0;
+      }
+    }
 
     .navigation__link {
-      color: #32b86b;
+      color: black;
     }
 
     &:hover {
       span {
+        color: #43aa58;
         border-bottom: 1px solid #d8eee0;
       }
     }
