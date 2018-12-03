@@ -1,11 +1,57 @@
 (function () {
   'use strict';
 
+  var filters = document.querySelectorAll('.slider__filter-item');
+  var subMenuArray = document.querySelectorAll('.slider__filter-sub-list');
+
+  var openSubMenu = function openSubMenu(it, value, i) {
+    var subMenu = it.querySelector('.slider__filter-sub-list');
+    if (subMenu == null) return;
+
+    for (var j = 0; j < subMenuArray.length; j++) {
+      if (j == i) {
+        j++;
+      }
+
+      if (j == subMenuArray.length) break;
+
+      if (subMenuArray[j].classList.contains('slider__filter-sub-list--open')) {
+        subMenuArray[j].classList.remove('slider__filter-sub-list--open');
+      }
+    }
+
+    subMenu.classList.toggle('slider__filter-sub-list--open');
+    changeValue(subMenu, value);
+  };
+
+  var changeValue = function changeValue(item, value) {
+    var arrayOfValue = item.querySelectorAll('.slider__filter-sub-item');
+    if (arrayOfValue == null) return;
+
+    arrayOfValue.forEach(function (its) {
+      its.addEventListener('click', function () {
+        value.innerText = its.innerText;
+      });
+    });
+  };
+
+  var getElem = function getElem() {
+    filters.forEach(function (it, i) {
+      it.addEventListener('click', function () {
+        var value = it.querySelector('span');
+        if (value == null) return;
+        openSubMenu(it, value, i);
+      });
+    });
+  };
+
+  getElem();
+
   var sliderPagination = function sliderPagination(element, current, count) {
     element.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
       //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
       var i = (currentSlide ? currentSlide : 0) + 1;
-      current.text('0' + i + '/ ');
+      current.text('0' + i);
       count.text('0' + slick.slideCount);
       return false;
     });
@@ -17,7 +63,6 @@
 
   var getSliderLength = function getSliderLength(slider, length) {
     var sliderItem = slider.querySelectorAll('li');
-    console.log(sliderItem.length);
     if (sliderItem.length <= 9) {
       length.innerHTML = '0' + sliderItem.length;
     } else {
@@ -161,5 +206,67 @@
     nextArrow: '<button class="slider__btn arrow-btn slider__btn--next"><span class="visually-hidden">Вперед</span></button>'
   });
   //
+
+  // Accordion
+  var catalogItemArray = document.querySelectorAll('.catalog__item');
+
+  var resizeSlide = function resizeSlide(evt, i) {
+    if (evt.type == 'mouseover') {
+      catalogItemArray[i].classList.add('catalog__item--grow');
+      switch (i) {
+        case 0:
+          catalogItemArray[1].classList.add('catalog__item--shrink');
+          break;
+        case 1:
+          catalogItemArray[0].classList.add('catalog__item--shrink');
+          break;
+      }
+    } else {
+      catalogItemArray[i].classList.remove('catalog__item--grow');
+      switch (i) {
+        case 0:
+          catalogItemArray[1].classList.remove('catalog__item--shrink');
+          break;
+        case 1:
+          catalogItemArray[0].classList.remove('catalog__item--shrink');
+          break;
+      }
+    }
+  };
+
+  var accordion = function accordion() {
+    var _loop = function _loop(j) {
+      catalogItemArray[j].addEventListener('mouseover', function (evt) {
+        resizeSlide(evt, j);
+      });
+      catalogItemArray[j].addEventListener('mouseout', function (evt) {
+        resizeSlide(evt, j);
+      });
+    };
+
+    for (var j = 0; j < 2; j++) {
+      _loop(j);
+    }
+  };
+  accordion();
+
+  var $objectSlide = $('.object__slide');
+  var $objectSlideList = $('.object__slide-list');
+
+  $objectSlide.slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.object__slide-list'
+  });
+  $objectSlideList.slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.object__slide',
+    dots: false,
+    centerMode: false,
+    focusOnSelect: true
+  });
 
 }());

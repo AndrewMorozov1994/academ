@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="img/site.webmanifest">
+  <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/style.css">
+  <title>ЦН “Академический”</title>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=bfdf0586-3c44-47af-9070-a91f11ab6a8a&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+  <header class="main-header">
+      <div class="main-header__img-wrapper">
+        <img class="main-header__img" src="img/logo.png" alt="Логотип">
+        <div class="main-header__img-description-wrapper">
+          <p class="main-header__img-title">Центр недвижимости</p>
+          <p class="main-header__img-name">“Академический”</p>
+          <p class="main-header__img-description">Качество проверенное временем</p>
+        </div>
+      </div>
+    <nav class="main-menu">
+      <button class="main-menu__btn main-menu__btn--open"><span class="visually-hidden">Меню</span></button>
+      <ul class="main-menu__list list-style-none">
+        <li class="main-menu__item">
+          <a class="main_menu__item-link" href="#">Объекты</a>
+          <ul class="main-menu__sub-list list-style-none">
+            <li class="main-menu__sub-item"><a href="#">Шаблон1</a></li>
+            <li class="main-menu__sub-item"><a href="#">Шаблон2</a></li>
+            <li class="main-menu__sub-item"><a href="#">Шаблон3</a></li>
+          </ul>
+        </li>
+        <li class="main-menu__item"><a class="main_menu__item-link" href="services.html">Услуги</a></li>
+        <li class="main-menu__item"><a class="main_menu__item-link" href="program.html">Партнерские программы</a></li>
+        <li class="main-menu__item"><a class="main_menu__item-link" href="about-us.html">О нас</a></li>
+        <li class="main-menu__item"><a class="main_menu__item-link" href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+    <ul class="main-header__contact-list list-style-none">
+      <li class="main-header__contact-item">
+        <p class="main-header__contact-title">Мы работаем:</p>
+        <p class="main-header__contact-description">ежедневно с <span class="color-green">9:00</span> до <span class="color-green">20:00</span></p>
+      </li>
+      <li class="main-header__contact-item">
+        <a class="main-header__link" href="tel:+73433289633">+7 (343) <span class="color-green">328-96-33</span></a>
+        <button class="main-header__btn">Перезвоните мне</button>
+      </li>
+    </ul>
+  </header>
+  <main>
+  <section class="navigation">
+    <h2 class="visually-hidden">Хлебные крошки</h2>
+    <ul class="navigation__list list-style-none">
+      <li class="navigation__item"><a href="#" class="navigation__link"><span>Главная</span></a></li>
+      <li class="navigation__item"><a href="#" class="navigation__link"><span>Объекты</span></a></li>
+      <li class="navigation__item"><a class="navigation__link"><span>Квартиры и комнаты</span></a></li>
+    </ul>
+  </section>
+  <section class="object-list">
+    <h1 class="main-title">Квартиры и комнаты</h1>
+    <p class="object-list__description">Более 9 755 квартир в базе вторичного жилья и 16 528 квартир в новостройках</p>
+    <div class="object-list-filter">
+      <ul class="object-list-filter__list list-style-none">
+        <li class="object-list-filter__item"><span>Квартира</span></li>
+        <li class="object-list-filter__item"><span>Продать</span></li>
+        <li class="object-list-filter__item"><span>Город</span></li>
+        <li class="object-list-filter__item"><span>Район</span></li>
+      </ul>
+      <div class="object-list-filter-line-wrapper">
+        <div class="object-list-filter-price">
+          <p class="object-list-filter-price__title">Цена, руб.</p>
+          <div class="object-list-filter-price-wrapper">
+            <input class="object-list-filter-price-min" type="text" pattern="[0-9]" value="213 212">
+            <input class="object-list-filter-price-max" type="text" pattern="[0-9]" value="213 212">
+          </div>
+
+          <div class="object-list-filter__line">
+            <button class="object-list-filter__btn object-list-filter__btn--left"></button>
+            <div class="object-list-filter-active"></div>
+            <button class="object-list-filter__btn object-list-filter__btn--right"></button>
+          </div>
+        </div>
+        <div class="object-list-filter-m2">
+          <p class="object-list-filter-price__title">Площадь, м2</p>
+          <div class="object-list-filter-price-wrapper">
+            <input class="object-list-filter-price-min" type="text" pattern="[0-9]" value="213 212">
+            <input class="object-list-filter-price-max" type="text" pattern="[0-9]" value="213 212">
+          </div>
+          <div class="object-list-filter__line">
+            <button class="object-list-filter__btn object-list-filter__btn--left"></button>
+            <div class="object-list-filter-active"></div>
+            <button class="object-list-filter__btn object-list-filter__btn--right"></button>
+          </div>
+        </div>
+      </div>
+      <div class="object-list-filter-bottom-wrapper">
+        <p class="object-list-filter__price-m2">Стоимость за 1 кв.м. <span class="object-list-filter-span">45 657 р.</span></p>
+        <button class="object-list-filter__search-btn">Расширенный поиск</button>
+        <button class="main-btn object-list-filter__select-btn">Подобрать</button>
+      </div>
+
+    </div>
+    <div class="object-list-select-wrapper">
+      <div class="object-list-radio">
+          <input type="radio" name="object-radio-list" id="object-radio-list-00" checked>
+          <input type="radio" name="object-radio-list" id="object-radio-list-01">
+          <input type="radio" name="object-radio-list" id="object-radio-list-02">
+          <label for="object-radio-list-00" class="object-list-radio-label object-list-radio-label--00"></label>
+          <label for="object-radio-list-01" class="object-list-radio-label object-list-radio-label--01"></label>
+          <label for="object-radio-list-02" class="object-list-radio-label object-list-radio-label--02"></label>
+        </div>
+        <p class="object-list-sort">Упорядочить:
+          <select id="object-list-sort-select">
+            <option value="по цене">по цене</option>
+          </select>
+          <label for="object-list-sort-select"></label>
+        </p>
+        <p class="object-list-view">Показать:
+          <input type="radio" name="object-list-view-radio" id="object-list-view-radio--00" checked>
+          <input type="radio" name="object-list-view-radio" id="object-list-view-radio--01">
+          <input type="radio" name="object-list-view-radio" id="object-list-view-radio--02">
+          <label class="object-list-view-radio-label--00" for="object-list-view-radio--00">12</label>
+          <label class="object-list-view-radio-label--01" for="object-list-view-radio--01">24</label>
+          <label class="object-list-view-radio-label--02" for="object-list-view-radio--02">Все</label>
+        </p>
+    </div>
+    <ul class="object-list__info-list object-list__info-list--hide list-style-none">
+      <li class="object-list__info-item">Наименование</li>
+      <li class="object-list__info-item">Адрес</li>
+      <li class="object-list__info-item">Цена</li>
+      <li class="object-list__info-item">Площадь, м2</li>
+      <li class="object-list__info-item">Этаж</li>
+      <li class="object-list__info-item">Цена за м2</li>
+    </ul>
+    <ul class="object-list__list object-list__list--list list-style-none">
+      <li class="object-list__item">
+        <div class="object-list__item-img">
+          <img src="img/services_00.png" alt="Фото">
+        </div>
+        <div class="object-list__item-title-wrapper">
+          <a href="#" class="object-list__item-title"><span>2-К квартира</span></a>
+          <a href="#"><p class="object-list__item-adress">Автовокзал, Онежская 9</p></a>
+          <p class="object-list__item-price"><span>2 600 000</span> р.</p>
+        </div>
+        <div class="object-list__item-info-wrapper">
+          <div class="object-list__item-row"><span class="object-list__item-row-title">Площадь</span><span class="object-list__item-row-text">52 м2</span></div>
+          <div class="object-list__item-row"><span class="object-list__item-row-title">Этаж</span><span class="object-list__item-row-text">6/8</span></div>
+          <div class="object-list__item-row"><span class="object-list__item-row-title">Цена за м2</span><span class="object-list__item-row-text">47 675 р.</span></div>
+        </div>
+      </li>
+      <li class="object-list__item">
+        <div class="object-list__item-img">
+          <img src="img/services_00.png" alt="Фото">
+        </div>
+        <div class="object-list__item-title-wrapper">
+          <a href="#" class="object-list__item-title"><span>2-К квартира</span></a>
+          <a href="#"><p class="object-list__item-adress">Автовокзал, Онежская 9</p></a>
+          <p class="object-list__item-price"><span>2 600 000</span> р.</p>
+        </div>
+        <div class="object-list__item-info-wrapper">
+          <div class="object-list__item-row"><span class="object-list__item-row-title">Площадь</span><span class="object-list__item-row-text">52 м2</span></div>
+          <div class="object-list__item-row"><span class="object-list__item-row-title">Этаж</span><span class="object-list__item-row-text">6/8</span></div>
+          <div class="object-list__item-row"><span class="object-list__item-row-title">Цена за м2</span><span class="object-list__item-row-text">47 675 р.</span></div>
+        </div>
+      </li>
+      <li class="object-list__item">
+        <div class="object-list__item-img">
+          <img src="img/services_00.png" alt="Фото">
+        </div>
+        <div class="object-list__item-title-wrapper">
+          <a href="#" class="object-list__item-title"><span>2-К квартира</span></a>
+          <a href="#"><p class="object-list__item-adress">Автовокзал, Онежская 9</p></a>
+          <p class="object-list__item-price"><span>2 600 000</span> р.</p>
+        </div>
+        <div class="object-list__item-info-wrapper">
+          <div class="object-list__item-row"><span class="object-list__item-row-title">Площадь</span><span class="object-list__item-row-text">52 м2</span></div>
+          <div class="object-list__item-row"><span class="object-list__item-row-title">Этаж</span><span class="object-list__item-row-text">6/8</span></div>
+          <div class="object-list__item-row"><span class="object-list__item-row-title">Цена за м2</span><span class="object-list__item-row-text">47 675 р.</span></div>
+        </div>
+      </li>
+      <li class="object-list__item">
+          <div class="object-list__item-img">
+            <img src="img/services_00.png" alt="Фото">
+          </div>
+          <div class="object-list__item-title-wrapper">
+            <a href="#" class="object-list__item-title"><span>2-К квартира</span></a>
+            <a href="#"><p class="object-list__item-adress">Автовокзал, Онежская 9</p></a>
+            <p class="object-list__item-price"><span>2 600 000</span> р.</p>
+          </div>
+          <div class="object-list__item-info-wrapper">
+            <div class="object-list__item-row"><span class="object-list__item-row-title">Площадь</span><span class="object-list__item-row-text">52 м2</span></div>
+            <div class="object-list__item-row"><span class="object-list__item-row-title">Этаж</span><span class="object-list__item-row-text">6/8</span></div>
+            <div class="object-list__item-row"><span class="object-list__item-row-title">Цена за м2</span><span class="object-list__item-row-text">47 675 р.</span></div>
+          </div>
+        </li>
+        <li class="object-list__item">
+          <div class="object-list__item-img">
+            <img src="img/services_00.png" alt="Фото">
+          </div>
+          <div class="object-list__item-title-wrapper">
+            <a href="#" class="object-list__item-title"><span>2-К квартира</span></a>
+            <a href="#"><p class="object-list__item-adress">Автовокзал, Онежская 9</p></a>
+            <p class="object-list__item-price"><span>2 600 000</span> р.</p>
+          </div>
+          <div class="object-list__item-info-wrapper">
+            <div class="object-list__item-row"><span class="object-list__item-row-title">Площадь</span><span class="object-list__item-row-text">52 м2</span></div>
+            <div class="object-list__item-row"><span class="object-list__item-row-title">Этаж</span><span class="object-list__item-row-text">6/8</span></div>
+            <div class="object-list__item-row"><span class="object-list__item-row-title">Цена за м2</span><span class="object-list__item-row-text">47 675 р.</span></div>
+          </div>
+        </li>
+        <li class="object-list__item">
+          <div class="object-list__item-img">
+            <img src="img/services_00.png" alt="Фото">
+          </div>
+          <div class="object-list__item-title-wrapper">
+            <a href="#" class="object-list__item-title"><span>2-К квартира</span></a>
+            <a href="#"><p class="object-list__item-adress">Автовокзал, Онежская 9</p></a>
+            <p class="object-list__item-price"><span>2 600 000</span> р.</p>
+          </div>
+          <div class="object-list__item-info-wrapper">
+            <div class="object-list__item-row"><span class="object-list__item-row-title">Площадь</span><span class="object-list__item-row-text">52 м2</span></div>
+            <div class="object-list__item-row"><span class="object-list__item-row-title">Этаж</span><span class="object-list__item-row-text">6/8</span></div>
+            <div class="object-list__item-row"><span class="object-list__item-row-title">Цена за м2</span><span class="object-list__item-row-text">47 675 р.</span></div>
+          </div>
+        </li>
+    </ul>
+
+  </section>
+  <section class="paginator">
+    <h2 class="visually-hidden">Переключатель страниц</h2>
+    <ul class="paginator__list list-style-none">
+      <li class="paginator__item"><a href="#" class="paginator__link"><span class="visually-hidden">назад</span></a></li>
+      <li class="paginator__item"><a href="#" class="paginator__link">1</a></li>
+      <li class="paginator__item"><a href="#" class="paginator__link paginator__link--active">2</a></li>
+      <li class="paginator__item"><a href="#" class="paginator__link">3</a></li>
+      <li class="paginator__item"><a href="#" class="paginator__link">...</a></li>
+      <li class="paginator__item"><a href="#" class="paginator__link">12</a></li>
+      <li class="paginator__item"><a href="#" class="paginator__link"><span class="visually-hidden">Вперед</span></a></li>
+    </ul>
+  </section>
+  <section class="consultation">
+    <h2 class="visually-hidden">Консультация</h2>
+    <div class="consultation-wrapper">
+      <p class="consultation__title">получите консультацию бесплатно!</p>
+      <p class="consultation__description">Обратитесь к нашим специалистам, и мы подскажем лучшее решение!</p>
+      <a class="consultation__btn main-btn" href="#">Получить консультацию</a>
+    </div>
+  </section>
+  </main>
+  <footer>
+    <div class="footer-wrapper">
+
+      <nav class="footer-menu">
+        <ul class="footer-menu__list list-style-none">
+          <li class="footer-menu__item"><a href="#"><span>каталог объектов</span></a></li>
+          <li class="footer-menu__item"><a href="#"><span>Услуги</span></a></li>
+          <li class="footer-menu__item"><a href="#"><span>Партнерские программы</span></a></li>
+          <li class="footer-menu__item"><a href="#"><span>О нас</span></a></li>
+          <li class="footer-menu__item"><a href="#"><span>Контакты</span></a></li>
+        </ul>
+      </nav>
+      <ul class="footer__contact-list list-style-none">
+        <li class="footer__contact-item">
+          <p class="footer__contact-title">Мы работаем:</p>
+          <p class="footer__contact-description">ежедневно с <span class="color-green">9:00</span> до <span class="color-green">20:00</span></p>
+        </li>
+        <li class="footer__contact-item">
+          <a class="footer__link" href="tel:+73433289633">+7 (343) <span class="color-green">328-96-33</span></a>
+          <a class="footer__email" href="mailto:e1@e1.ru" ><span>cn-akadem@mail.ru</span></a>
+        </li>
+      </ul>
+      <section class="copyright">
+        <h4 class="copyright__title">ЦН “Академический”</h4>
+        <p class="copyright__description">Все права защищены</p>
+        <ul class="copyright__list list-style-none">
+          <li class="copyright__item copyright__item--vk"><a href="#" class="copyright__link"><span class="visually-hidden">VK</span></a></li>
+          <li class="copyright__item copyright__item--tw"><a href="#" class="copyright__link"><span class="visually-hidden">TW</span></a></li>
+          <li class="copyright__item copyright__item--fb"><a href="#" class="copyright__link"><span class="visually-hidden">FB</span></a></li>
+          <li class="copyright__item copyright__item--yt"><a href="#" class="copyright__link"><span class="visually-hidden">YT</span></a></li>
+        </ul>
+      </section>
+      <section class="developer">
+        <h2 class="visually-hidden">Разработка</h2>
+        <img src="img/uralsite.png" alt="Лого" class="developer__img">
+        <p class="developer__description">Создание сайта</p>
+      </section>
+    </div>
+  </footer>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/list.js"></script>
+</body>
+</html>
