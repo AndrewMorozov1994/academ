@@ -79,11 +79,11 @@
 
   .catalog__item {
     margin-bottom: 0;
-    &:not(:last-child) {
-      width: 50%;
-    }
+    width: 50%;
+
     &:last-child {
       min-height: 250px;
+      width: 100%;
     }
   }
 }
@@ -109,6 +109,8 @@
 
   .catalog__item {
     justify-content: flex-start;
+    transition: width 0.5s;
+
     &:not(:last-child) {
       min-height: 410px;
       padding-top: 150px;
@@ -120,6 +122,14 @@
 
     span {
       padding-left: 40px;
+    }
+
+    &--grow {
+      width: 70%;
+    }
+
+    &--shrink {
+      width: 30%;
     }
   }
 

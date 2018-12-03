@@ -1,8 +1,12 @@
+import {getElem} from './inex-filters.js';
+
+getElem();
+
 const sliderPagination = (element, current, count) => {
   element.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
     //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
     var i = (currentSlide ? currentSlide : 0) + 1;
-    current.text('0' + i + '/ ');
+    current.text('0' + i);
     count.text('0' + slick.slideCount);
     return false;
   });
@@ -15,7 +19,6 @@ var her2 = document.querySelector('.special__number-lenght');
 
 const getSliderLength = (slider, length) => {
   const sliderItem = slider.querySelectorAll('li');
-  console.log(sliderItem.length);
   if (sliderItem.length <= 9) {
     length.innerHTML = '0' + sliderItem.length;
   } else {
@@ -166,6 +169,42 @@ $sliderList.slick({
 })
 //
 
+// Accordion
+const catalogItemArray = document.querySelectorAll('.catalog__item');
+
+const resizeSlide = (evt, i) => {
+  if (evt.type == 'mouseover') {
+    catalogItemArray[i].classList.add('catalog__item--grow');
+    switch (i) {
+      case 0: catalogItemArray[1].classList.add('catalog__item--shrink');
+        break;
+      case 1: catalogItemArray[0].classList.add('catalog__item--shrink');
+        break;
+    }
+  } else {
+    catalogItemArray[i].classList.remove('catalog__item--grow');
+    switch (i) {
+      case 0: catalogItemArray[1].classList.remove('catalog__item--shrink');
+        break;
+      case 1: catalogItemArray[0].classList.remove('catalog__item--shrink');
+        break;
+    }
+  }
+}
+
+const accordion = () => {
+  for (let j = 0; j < 2; j++) {
+    catalogItemArray[j].addEventListener('mouseover', (evt) => {
+      resizeSlide(evt, j);
+    });
+    catalogItemArray[j].addEventListener('mouseout', (evt) => {
+      resizeSlide(evt, j);
+    })
+  }
+};
+accordion();
+
+
 const $objectSlide = $('.object__slide');
 const $objectSlideList = $('.object__slide-list');
 
@@ -184,3 +223,4 @@ $objectSlideList.slick({
   centerMode: false,
   focusOnSelect: true
 });
+
