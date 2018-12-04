@@ -1,4 +1,6 @@
 import {getElem} from './inex-filters.js';
+import {openReview} from './reviews.js';
+import {openModal} from './modal.js';
 
 getElem();
 
@@ -136,8 +138,9 @@ const $reviewsList = $('.reviews__list');
 $reviewsList.slick({
   centerMode: true,
   arrows: false,
-  slidesToShow: 4,
+  slidesToShow: 3,
   focusOnSelect: true,
+  centerPadding: '150px',
   responsive: [
     {
       breakpoint: 1070,
@@ -157,6 +160,11 @@ $reviewsList.slick({
       }
     }]
 })
+
+const images = document.querySelectorAll('.reviews__item-img');
+console.log(images);
+
+// openReview(images);
 //
 
 // SLIDER-LIST SLIDER
@@ -224,3 +232,13 @@ $objectSlideList.slick({
   focusOnSelect: true
 });
 
+// Модалки
+const propertyLinks = document.querySelectorAll('.property-link');
+const propertyModal = document.querySelector('.modal--property');
+
+openModal(propertyLinks, propertyModal);
+
+const callModal = document.querySelector('.modal--сall');
+const callLinks = document.querySelectorAll('.btn-call');
+
+openModal(callLinks, callModal);

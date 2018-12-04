@@ -78,6 +78,16 @@
 
 .slider__filter-sub-list {
   display: none;
+
+  &--open {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    background-color: white;
+    box-sizing: border-box;
+    z-index: 10;;
+  }
 }
 
 .slider__filter-list {
@@ -251,6 +261,7 @@
     padding-left: 90px;
     box-sizing: border-box;
     transition: right 0.5s;
+    cursor: pointer;
 
     &::before {
       width: 87px;
@@ -276,24 +287,11 @@
     }
   }
 
-  .slider__filter-sub-list {
-
-    &--open {
-      display: block;
-      position: absolute;
-      width: 100%;
-      top: 70px;
-      background-color: white;
-      box-sizing: border-box;
-
-    }
-  }
-
   .slider__filter-sub-item {
     padding: 5px 0 5px 20px;
 
     &:hover {
-      background-color: #36aa67;
+      background-color: #e6fff1;
     }
   }
 }
