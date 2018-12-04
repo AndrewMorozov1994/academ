@@ -50,14 +50,14 @@
       </li>
       <li class="main-header__contact-item">
         <a class="main-header__link" href="tel:+73433289633">+7 (343) <span class="color-green">328-96-33</span></a>
-        <button class="main-header__btn">Перезвоните мне</button>
+        <button class="main-header__btn btn-call">Перезвоните мне</button>
       </li>
     </ul>
   </header>
   <main>
     <section class="slider">
       <h2 class="visually-hidden">Слайдер</h2>
-      <div class="slider__right-nav slider__right-nav--property">Заявка на подбор недвижимости</div>
+      <div class="slider__right-nav slider__right-nav--property property-link">Заявка на подбор недвижимости</div>
       <div class="slider__right-nav slider__right-nav--mortgage">Заявка на ипотеку</div>
 
       <ul class="slider__list peppermint list-style-none" id="slider-top">
@@ -274,13 +274,13 @@
       <ul class="catalog__list list-style-none">
         <li class="catalog__item catalog__item--00">
           <span class="color-green">01</span>
-          <p class="catalog__item-title">Квартиры, комнаты </p>
+          <p class="catalog__item-title"><a href="#">Квартиры, комнаты </a></p>
           <p class="catalog__item-description">Центр недвижимости основан группой риелторов с опытом работы более 15 лет</p>
           <a class="catalog__item-btn arrow-btn main-btn" href="#"></a>
         </li>
         <li class="catalog__item catalog__item--01">
           <span class="color-green">02</span>
-          <p class="catalog__item-title">Новостройки</p>
+          <p class="catalog__item-title"><a href="#">Новостройки</a></p>
           <ul class="catalog__sub-list list-style-none">
             <li class="catalog__sub-item"><a href="#">1-комнатные квартиры</a></li>
             <li class="catalog__sub-item"><a href="#">2-комнатные квартиры</a></li>
@@ -292,7 +292,7 @@
         </li>
         <li class="catalog__item catalog__item--02">
           <span class="color-green">03</span>
-          <p class="catalog__item-title">Коммерческая недвижимость</p>
+          <p class="catalog__item-title"><a href="#">Коммерческая недвижимость</a></p>
           <p class="catalog__item-description">Более 100 объектов от нашего агентства</p>
           <a class="catalog__item-btn arrow-btn main-btn" href="#"></a>
         </li>
@@ -327,7 +327,7 @@
           <div class="about-us__contact-item-request about-us__contact-item-request--selection">
             <p class="about-us__contact-item-title about-us__contact-item-title--selection">Заявка на подбор недвижимости</p>
             <p class="about-us__contact-item-description">Мы подберем наиболее оптимальный вариант</p>
-            <a class="about-us__contact-item-btn arrow-btn main-btn" href="#"></a>
+            <a class="about-us__contact-item-btn arrow-btn main-btn property-link" href="#"></a>
           </div>
           <div class="about-us__contact-item-request about-us__contact-item-request--mortgage">
             <p class="about-us__contact-item-title about-us__contact-item-title--mortgage">Заявка на ипотеку</p>
@@ -402,7 +402,7 @@
       <div class="consultation-wrapper">
         <p class="consultation__title">получите консультацию бесплатно!</p>
         <p class="consultation__description">Обратитесь к нашим специалистам, и мы подскажем лучшее решение!</p>
-        <a class="consultation__btn main-btn" href="#">Получить консультацию</a>
+        <a class="consultation__btn main-btn btn-call" href="#">Получить консультацию</a>
       </div>
     </section>
     <section class="news">
@@ -413,7 +413,7 @@
       <ul class="news__list peppermint list-style-none" id="slider-news">
         <li class="news__item">
           <div class="news__item-img">
-            <img src="img/news.jpg" alt="Фото">
+            <a href="#"><img src="img/news.jpg" alt="Фото"></a>
           </div>
           <p class="news__item-date">3 сентября 2018 г</p>
           <a class="news__item-title" href="#"><span>5 новых объектов в каталоге</span></a>
@@ -421,7 +421,7 @@
         </li>
         <li class="news__item">
           <div class="news__item-img">
-            <img src="img/news.jpg" alt="Фото">
+            <a href="#"><img src="img/news.jpg" alt="Фото"></a>
           </div>
           <p class="news__item-date">3 сентября 2018 г</p>
           <a class="news__item-title" href="#"><span>5 новых объектов в каталоге</span></a>
@@ -429,7 +429,7 @@
         </li>
         <li class="news__item">
           <div class="news__item-img">
-            <img src="img/news.jpg" alt="Фото">
+            <a href="#"><img src="img/news.jpg" alt="Фото"></a>
           </div>
           <p class="news__item-date">3 сентября 2018 г</p>
           <a class="news__item-title" href="#"><span>5 новых объектов в каталоге</span></a>
@@ -437,7 +437,7 @@
         </li>
         <li class="news__item">
           <div class="news__item-img">
-            <img src="img/news.jpg" alt="Фото">
+            <a href="#"><img src="img/news.jpg" alt="Фото"></a>
           </div>
           <p class="news__item-date">3 сентября 2018 г</p>
           <a class="news__item-title" href="#"><span>5 новых объектов в каталоге</span></a>
@@ -445,7 +445,7 @@
         </li>
         <li class="news__item">
           <div class="news__item-img">
-            <img src="img/news.jpg" alt="Фото">
+            <a href="#"><img src="img/news.jpg" alt="Фото"></a>
           </div>
           <p class="news__item-date">3 сентября 2018 г</p>
           <a class="news__item-title" href="#"><span>5 новых объектов в каталоге</span></a>
@@ -501,6 +501,76 @@
       </section>
     </div>
   </footer>
+  <div class="overlay"></div>
+  <section class="modal modal--property">
+    <div class="modal__wrapper">
+      <h2 class="modal__title">Заявка на подбор недвижимости</h2>
+      <button class="modal__close"></button>
+      <form action="#" method="POST" class="modal__form">
+        <div class="modal__select-wrap modal__select-wrap--sale">
+          <select class="modal__item select">
+            <option value="sale">Продажа</option>
+            <option value="buy">Покупка</option>
+          </select>
+        </div>
+        <div class="modal__select-wrap modal__select-wrap--type">
+          <select class="modal__item select">
+            <option value="type">Тип недвижимости</option>
+          </select>
+        </div>
+        <label class="modal__item modal__item--city label">
+          <input type="text" placeholder="Город">
+        </label>
+        <label class="modal__item label">
+          <input type="text" placeholder="Адрес">
+        </label>
+        <label class="modal__item label">
+          <input type="text" placeholder="Имя" required>
+        </label>
+        <label class="modal__item label">
+          <input type="tel" placeholder="Телефон" required>
+        </label>
+        <label class="modal__item label">
+          <input type="email" placeholder="E-mail">
+        </label>
+        <label class="modal__item modal__item--comment label">
+          <input type="text" placeholder="Комментарий">
+        </label>
+        <div class="modal__error">
+          <p>Вы не заполнили одно обязательное поле</p>
+        </div>
+        <div class="modal__capcha"></div>
+        <button type="submit" class="modal__submit">Отправить</button>
+        <label class="modal__consent">
+          <input type="checkbox">
+          <p>Я даю согласие на обработку персональных данных</p>
+        </label>
+      </form>
+    </div>
+  </section>
+  <section class="modal modal--сall">
+    <div class="modal__wrapper">
+      <h2 class="modal__title">Перезвоните мне</h2>
+      <button class="modal__close"></button>
+      <form action="#" method="POST" class="modal__form">
+          <label class="modal__item label">
+            <input type="text" placeholder="Имя" required>
+          </label>
+          <label class="modal__item label">
+            <input type="tel" placeholder="Телефон" required>
+          </label>
+          <div class="modal__error">
+             <p>Вы не заполнили одно обязательное поле</p>
+          </div>
+          <div class="modal__capcha"></div>
+          <button type="submit" class="modal__submit">Отправить</button>
+          <label class="modal__consent">
+            <input type="checkbox">
+            <p>Я даю согласие на обработку персональных данных</p>
+          </label>
+      </form>
+    </div>
+  </section>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="js/slick.min.js"></script>

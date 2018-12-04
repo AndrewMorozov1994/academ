@@ -30,15 +30,15 @@
   }
 
   &--00 {
-    background-image: url("../img/catalog_img_mobile_00.jpg")
+    background-image: url("../img/q1.jpg")
   }
 
   &--01 {
-    background-image: url("../img/catalog_img_mobile_01.jpg")
+    background-image: url("../img/q2.jpg")
   }
 
   &--02 {
-    background-image: url("../img/catalog_img_mobile_02.jpg")
+    background-image: url("../img/q3.jpg")
   }
 }
 
@@ -137,6 +137,15 @@
     padding-left: 40px;
     width: 100%;
     font-size: 26px;
+
+    a {
+      color: inherit;
+      text-transform: uppercase;
+
+      &:hover {
+        border-bottom: 1px solid #2faf65;
+      }
+    }
   }
 
   .catalog__item-description {
@@ -162,5 +171,10 @@
       margin-bottom: 10px;
       margin-left: 40px;
     }
+  }
+
+  .catalog__sub-item a:hover{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    opacity: 0.7;
   }
 }

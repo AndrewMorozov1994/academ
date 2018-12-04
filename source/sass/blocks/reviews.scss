@@ -72,5 +72,16 @@
       }
     }
 
+    &--full {
+      position: fixed;
+      top: 0;
+      width: 400px;
+      z-index: 100;
+
+      img {
+        width: 400px;
+      }
+    }
+
   }
 }
