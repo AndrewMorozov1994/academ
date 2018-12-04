@@ -3,8 +3,12 @@
   li {
     border: none;
     border-bottom: none;
-    width: 90%;
+    width: 80%;
     max-width: 1170px;
+  }
+
+  .page-news__item:not(:last-child) {
+    border-bottom: none;
   }
   .services__img {
     max-width: 260px;
@@ -30,11 +34,103 @@
   }
 }
 
+.page-reviews__add-review {
+  width: calc(90% - 40px);
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 5px solid #e1f7ea;
+  margin-bottom: 30px;
+}
+
+.page-reviews__add-review-title {
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #43aa58;
+  font-weight: 700;
+}
+
+.page-reviews__add-review-btn {
+  font-size: 18px;
+  width: 100%;
+}
+
+.page-reviews__add-review-input {
+  width: 100%;
+  font-size: 20px;
+  color: #666666;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #32b86b;
+  margin-bottom: 20px;
+}
+
+#reviews-add-file {
+  position: absolute;
+  left: -9999px;
+}
+
+.page-reviews__add-review-label {
+  font-size: 18px;
+  color: #666666;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+    span {
+      border-bottom: 1px dashed #666666;
+    }
+   &::before {
+     display: block;
+     content: "";
+     width: 57px;
+     height: 56px;
+     margin-right: 10px;
+     background-image: url("../img/add-file.png");
+   }
+}
+
 @media (min-width: 768px) {
   .page-reviews__list {
     border: none;
+    li {
+      width: 90%;
+    }
     .page-news__item:not(:last-child) {
       border-bottom: none;
     }
+  }
+
+  .page-reviews__add-review {
+    padding: 100px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    width: calc(90% - 210px);
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1170px) {
+  .page-reviews__add-review-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    .page-reviews__add-review-input {
+      width: 40%;
+    }
+  }
+
+  .page-reviews__add-review-btn {
+    width: 250px;
+    order: 0;
+  }
+
+  .page-reviews__add-review-label {
+    order: 1;
+  }
+
+  .page-reviews__add-review {
+    margin-bottom: 70px;
   }
 }

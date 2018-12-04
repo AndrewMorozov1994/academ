@@ -18,23 +18,28 @@
 </head>
 <body>
   <header class="main-header">
-      <div class="main-header__img-wrapper">
-        <img class="main-header__img" src="img/logo.png" alt="Логотип">
-        <div class="main-header__img-description-wrapper">
-          <p class="main-header__img-title">Центр недвижимости</p>
-          <p class="main-header__img-name">“Академический”</p>
-          <p class="main-header__img-description">Качество проверенное временем</p>
-        </div>
+    <a class="main-header__img-wrapper" href="index.html">
+      <img class="main-header__img" src="img/logo.png" alt="Логотип">
+      <div class="main-header__img-description-wrapper">
+        <p class="main-header__img-title">Центр недвижимости</p>
+        <p class="main-header__img-name">“Академический”</p>
+        <p class="main-header__img-description">Качество проверенное временем</p>
       </div>
+    </a>
     <nav class="main-menu">
       <button class="main-menu__btn main-menu__btn--open"><span class="visually-hidden">Меню</span></button>
       <ul class="main-menu__list list-style-none">
         <li class="main-menu__item">
-          <a class="main_menu__item-link" >Объекты</a>
+          <a class="main_menu__item-link" href="#">Объекты</a>
           <ul class="main-menu__sub-list list-style-none">
-            <li class="main-menu__sub-item"><a href="#">Шаблон1</a></li>
-            <li class="main-menu__sub-item"><a href="#">Шаблон2</a></li>
-            <li class="main-menu__sub-item"><a href="#">Шаблон3</a></li>
+            <li class="main-menu__sub-item"><a href="#">Квартира / комната</a></li>
+            <li class="main-menu__sub-item"><a href="#">Новостройка</a></li>
+            <li class="main-menu__sub-item"><a href="#">Коммерческая недвижимость</a></li>
+            <li class="main-menu__sub-item"><a href="#">Земельные участки</a></li>
+            <li class="main-menu__sub-item"><a href="#">Коттедж / дом / земельный участок</a></li>
+            <li class="main-menu__sub-item"><a href="#">Зарубежная недвижимость</a></li>
+            <li class="main-menu__sub-item"><a href="#">Паркинг / гаражи</a></li>
+            <li class="main-menu__sub-item"><a href="#">Готовый бизнес</a></li>
           </ul>
         </li>
         <li class="main-menu__item"><a class="main_menu__item-link" href="services.html">Услуги</a></li>
@@ -396,6 +401,9 @@
           <div class="reviews__item-img"><img src="img/review_02.jpg" alt="Отзыв"></div>
         </li>
       </ul>
+      <div class="reviews-open">
+        <img src="img/review_00.jpg" alt="Фото">
+      </div>
     </section>
     <section class="consultation">
       <h2 class="visually-hidden">Консультация</h2>
@@ -495,9 +503,11 @@
         </ul>
       </section>
       <section class="developer">
-        <h2 class="visually-hidden">Разработка</h2>
-        <img src="img/uralsite.png" alt="Лого" class="developer__img">
-        <p class="developer__description">Создание сайта</p>
+        <a href="http://uralsite.ru/">
+          <h2 class="visually-hidden">Разработка</h2>
+          <img src="img/uralsite.png" alt="Лого" class="developer__img">
+          <p class="developer__description">Создание сайта</p>
+        </a>
       </section>
     </div>
   </footer>
@@ -577,5 +587,6 @@
   <script src="js/index.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/map.js"></script>
+  <script src="js/review.js"></script>
 </body>
 </html>

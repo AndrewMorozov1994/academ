@@ -194,9 +194,10 @@
   $reviewsList.slick({
     centerMode: true,
     arrows: false,
-    slidesToShow: 3,
+    slidesToShow: 4,
     focusOnSelect: true,
-    centerPadding: '150px',
+    centerPadding: '0',
+
     responsive: [{
       breakpoint: 1070,
       settings: {
@@ -210,7 +211,8 @@
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        centerPadding: '40px'
       }
     }]
   });
@@ -230,6 +232,7 @@
     nextArrow: '<button class="slider__btn arrow-btn slider__btn--next"><span class="visually-hidden">Вперед</span></button>'
   });
   //
+
 
   // Accordion
   var catalogItemArray = document.querySelectorAll('.catalog__item');
@@ -273,25 +276,6 @@
     }
   };
   accordion();
-
-  var $objectSlide = $('.object__slide');
-  var $objectSlideList = $('.object__slide-list');
-
-  $objectSlide.slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '.object__slide-list'
-  });
-  $objectSlideList.slick({
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    asNavFor: '.object__slide',
-    dots: false,
-    centerMode: false,
-    focusOnSelect: true
-  });
 
   // Модалки
   var propertyLinks = document.querySelectorAll('.property-link');

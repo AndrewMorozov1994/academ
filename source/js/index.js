@@ -138,9 +138,10 @@ const $reviewsList = $('.reviews__list');
 $reviewsList.slick({
   centerMode: true,
   arrows: false,
-  slidesToShow: 3,
+  slidesToShow: 4,
   focusOnSelect: true,
-  centerPadding: '150px',
+  centerPadding: '0',
+
   responsive: [
     {
       breakpoint: 1070,
@@ -156,7 +157,8 @@ $reviewsList.slick({
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        centerPadding: '40px'
       }
     }]
 })

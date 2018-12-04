@@ -23,6 +23,25 @@
   }
 }
 
+.reviews-open {
+  width: calc(90% - 40px);
+  max-width: 700px;
+  padding: 20px;
+  border: 2px solid #43aa58;
+  position: absolute;
+  background-color: white;
+  z-index: 1200;
+  left: calc(50% - 45%);
+  top: 20px;
+  display: none;
+    img {
+      width: 100%;
+    }
+  &--hide {
+    display: block;
+  }
+}
+
 @media (min-width: 768px) {
   .reviews__list {
     width: 100%;
@@ -83,5 +102,9 @@
       }
     }
 
+  }
+
+  .reviews-open {
+    left: calc(50% - 350px);
   }
 }
