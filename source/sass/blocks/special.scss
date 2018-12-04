@@ -181,9 +181,9 @@
   .special__item {
     position: relative;
 
-    // &:hover > .special__item-hover-wrapper {
-    //   display: block;
-    // }
+    &:hover > .special__item-hover-wrapper {
+      display: block;
+    }
   }
 
   .special__item-hover-wrapper {
@@ -194,7 +194,7 @@
       top: 0;
       left: 0;
       box-sizing: border-box;
-      display: block;
+      display: none;
   }
 
   .special__item-btn {
@@ -210,7 +210,12 @@
 
   .special__item-photo {
     position: absolute;
-    width: 200px;
+    width: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    border-radius: 30px;
     bottom: calc(46%);
     left: calc(50% - 60px);
   }

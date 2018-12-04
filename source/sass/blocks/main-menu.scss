@@ -30,13 +30,20 @@
 .main-menu__sub-list {
   display: none;
   background-color: #ebfff3;
-  position: absolute;
+
+  width: 100%;
 }
 
 .main-menu__item {
   padding-top: 20px;
   padding-bottom: 20px;
   min-height: 20px;
+  &:hover {
+    & > .main-menu__sub-list {
+      display: block;
+    }
+  }
+
 }
 
 .main-menu__btn {
@@ -130,6 +137,7 @@
         color: #43aa58;
       }
       & > .main-menu__sub-list {
+        position: absolute;
         display: block;
       }
     }

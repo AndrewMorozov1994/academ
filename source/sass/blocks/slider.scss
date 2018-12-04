@@ -127,6 +127,10 @@
   cursor: pointer;
 }
 
+.slider__btn-wrapper {
+  display: none;
+}
+
 
 @media (min-width: 768px) {
   .slider__text {

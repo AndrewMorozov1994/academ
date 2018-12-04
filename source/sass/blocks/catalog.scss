@@ -56,6 +56,9 @@
   width: 200px;
   color: white;
   padding-left: 20px;
+    a {
+      color: inherit;
+    }
 }
 
 .catalog__item-btn {
@@ -133,6 +136,8 @@
     }
   }
 
+
+
   .catalog__item-title {
     padding-left: 40px;
     width: 100%;
@@ -170,6 +175,12 @@
     li {
       margin-bottom: 10px;
       margin-left: 40px;
+    }
+  }
+
+  .catalog__item--01.catalog__item--shrink {
+    .catalog__sub-list {
+      height: 300px;
     }
   }
 

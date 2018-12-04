@@ -17,43 +17,48 @@
   <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
-  <header class="main-header">
-      <div class="main-header__img-wrapper">
-        <img class="main-header__img" src="img/logo.png" alt="Логотип">
-        <div class="main-header__img-description-wrapper">
-          <p class="main-header__img-title">Центр недвижимости</p>
-          <p class="main-header__img-name">“Академический”</p>
-          <p class="main-header__img-description">Качество проверенное временем</p>
-        </div>
-      </div>
-    <nav class="main-menu">
-      <button class="main-menu__btn main-menu__btn--open"><span class="visually-hidden">Меню</span></button>
-      <ul class="main-menu__list list-style-none">
-        <li class="main-menu__item">
-          <a class="main_menu__item-link" href="#">Объекты</a>
-          <ul class="main-menu__sub-list list-style-none">
-            <li class="main-menu__sub-item"><a href="#">Шаблон1</a></li>
-            <li class="main-menu__sub-item"><a href="#">Шаблон2</a></li>
-            <li class="main-menu__sub-item"><a href="#">Шаблон3</a></li>
+    <header class="main-header">
+        <a class="main-header__img-wrapper" href="index.html">
+          <img class="main-header__img" src="img/logo.png" alt="Логотип">
+          <div class="main-header__img-description-wrapper">
+            <p class="main-header__img-title">Центр недвижимости</p>
+            <p class="main-header__img-name">“Академический”</p>
+            <p class="main-header__img-description">Качество проверенное временем</p>
+          </div>
+        </a>
+        <nav class="main-menu">
+          <button class="main-menu__btn main-menu__btn--open"><span class="visually-hidden">Меню</span></button>
+          <ul class="main-menu__list list-style-none">
+            <li class="main-menu__item">
+              <a class="main_menu__item-link" href="#">Объекты</a>
+              <ul class="main-menu__sub-list list-style-none">
+                <li class="main-menu__sub-item"><a href="#">Квартира / комната</a></li>
+                <li class="main-menu__sub-item"><a href="#">Новостройка</a></li>
+                <li class="main-menu__sub-item"><a href="#">Коммерческая недвижимость</a></li>
+                <li class="main-menu__sub-item"><a href="#">Земельные участки</a></li>
+                <li class="main-menu__sub-item"><a href="#">Коттедж / дом / земельный участок</a></li>
+                <li class="main-menu__sub-item"><a href="#">Зарубежная недвижимость</a></li>
+                <li class="main-menu__sub-item"><a href="#">Паркинг / гаражи</a></li>
+                <li class="main-menu__sub-item"><a href="#">Готовый бизнес</a></li>
+              </ul>
+            </li>
+            <li class="main-menu__item"><a class="main_menu__item-link" href="services.html">Услуги</a></li>
+            <li class="main-menu__item"><a class="main_menu__item-link" href="program.html">Партнерские программы</a></li>
+            <li class="main-menu__item"><a class="main_menu__item-link" href="about-us.html">О нас</a></li>
+            <li class="main-menu__item"><a class="main_menu__item-link" href="contacts.html">Контакты</a></li>
           </ul>
-        </li>
-        <li class="main-menu__item"><a class="main_menu__item-link" href="services.html">Услуги</a></li>
-        <li class="main-menu__item"><a class="main_menu__item-link" href="program.html">Партнерские программы</a></li>
-        <li class="main-menu__item"><a class="main_menu__item-link" href="about-us.html">О нас</a></li>
-        <li class="main-menu__item"><a class="main_menu__item-link" href="contacts.html">Контакты</a></li>
-      </ul>
-    </nav>
-    <ul class="main-header__contact-list list-style-none">
-      <li class="main-header__contact-item">
-        <p class="main-header__contact-title">Мы работаем:</p>
-        <p class="main-header__contact-description">ежедневно с <span class="color-green">9:00</span> до <span class="color-green">20:00</span></p>
-      </li>
-      <li class="main-header__contact-item">
-        <a class="main-header__link" href="tel:+73433289633">+7 (343) <span class="color-green">328-96-33</span></a>
-        <button class="main-header__btn">Перезвоните мне</button>
-      </li>
-    </ul>
-  </header>
+        </nav>
+        <ul class="main-header__contact-list list-style-none">
+          <li class="main-header__contact-item">
+            <p class="main-header__contact-title">Мы работаем:</p>
+            <p class="main-header__contact-description">ежедневно с <span class="color-green">9:00</span> до <span class="color-green">20:00</span></p>
+          </li>
+          <li class="main-header__contact-item">
+            <a class="main-header__link" href="tel:+73433289633">+7 (343) <span class="color-green">328-96-33</span></a>
+            <button class="main-header__btn btn-call">Перезвоните мне</button>
+          </li>
+        </ul>
+      </header>
   <main>
   <section class="navigation">
     <h2 class="visually-hidden">Хлебные крошки</h2>
@@ -142,7 +147,25 @@
     <ul class="object-list__list object-list__list--list list-style-none">
       <li class="object-list__item">
         <div class="object-list__item-img">
-          <img src="img/services_00.png" alt="Фото">
+          <div class="special__item-img-wrapper rrrrr">
+            <div class="special__slide">
+              <img class="special__item-img" src="img/special_00.jpg" alt="Фото">
+
+            </div>
+            <div class="special__slide">
+              <img class="special__item-img" src="img/special_00.jpg" alt="Фото">
+
+            </div>
+            <div class="special__slide">
+              <img class="special__item-img" src="img/special_00.jpg" alt="Фото">
+
+            </div>
+          </div>
+          <div class="special__item-hover-wrapper bbb object-hover">
+            <button class="special__item-btn arrow-btn special__item-btn--back"><span class="visually-hidden">Назад</span></button>
+            <button class="special__item-btn arrow-btn special__item-btn--next"><span class="visually-hidden">Вперел</span></button>
+            <p class="special__item-photo"><span class="special__item-number color-green rr">1</span> фото из <span class="special__item-number color-green special__item-number1 rrr">3</span> </p>
+          </div>
         </div>
         <div class="object-list__item-title-wrapper">
           <a href="#" class="object-list__item-title"><span>2-К квартира</span></a>
@@ -157,7 +180,25 @@
       </li>
       <li class="object-list__item">
         <div class="object-list__item-img">
-          <img src="img/services_00.png" alt="Фото">
+          <div class="special__item-img-wrapper rrrrr">
+            <div class="special__slide">
+              <img class="special__item-img" src="img/special_00.jpg" alt="Фото">
+
+            </div>
+            <div class="special__slide">
+              <img class="special__item-img" src="img/special_00.jpg" alt="Фото">
+
+            </div>
+            <div class="special__slide">
+              <img class="special__item-img" src="img/special_00.jpg" alt="Фото">
+
+            </div>
+          </div>
+          <div class="special__item-hover-wrapper bbb">
+            <!-- <button class="special__item-btn arrow-btn special__item-btn--back"><span class="visually-hidden">Назад</span></button>
+            <button class="special__item-btn arrow-btn special__item-btn--next"><span class="visually-hidden">Вперел</span></button> -->
+            <p class="special__item-photo"><span class="special__item-number color-green rr">1</span> фото из <span class="special__item-number color-green special__item-number1 rrr">3</span> </p>
+          </div>
         </div>
         <div class="object-list__item-title-wrapper">
           <a href="#" class="object-list__item-title"><span>2-К квартира</span></a>
@@ -287,16 +328,18 @@
         </ul>
       </section>
       <section class="developer">
-        <h2 class="visually-hidden">Разработка</h2>
-        <img src="img/uralsite.png" alt="Лого" class="developer__img">
-        <p class="developer__description">Создание сайта</p>
-      </section>
+          <a href="http://uralsite.ru/">
+            <h2 class="visually-hidden">Разработка</h2>
+            <img src="img/uralsite.png" alt="Лого" class="developer__img">
+            <p class="developer__description">Создание сайта</p>
+          </a>
+        </section>
     </div>
   </footer>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="js/slick.min.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/object.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/list.js"></script>
 </body>

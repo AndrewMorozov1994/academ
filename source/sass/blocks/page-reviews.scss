@@ -1,0 +1,40 @@
+.page-reviews__list {
+  border: none;
+  li {
+    border: none;
+    border-bottom: none;
+    width: 90%;
+    max-width: 1170px;
+  }
+  .services__img {
+    max-width: 260px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    &:hover {
+      &::before {
+        display: block;
+        position: absolute;
+        z-index: 1000;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../img/reviews_size.png");
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .page-reviews__list {
+    border: none;
+    .page-news__item:not(:last-child) {
+      border-bottom: none;
+    }
+  }
+}

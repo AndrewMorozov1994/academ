@@ -198,13 +198,14 @@
 }
 
 .object__slide {
-  min-height: 300px;
     img {
       width: 100%;
     }
 }
 
 .object__slide-list {
+  margin-top: 10px;
+  margin-bottom: 20px;
   .object__slide-item {
     width: 100px;
       img {

@@ -4,8 +4,14 @@
   color: #42ab59;
   font-size: 24px;
   text-transform: uppercase;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .main-title {
+    padding-top: 40px;
+  }
 }
 
 @media (min-width: 1170px) {
@@ -24,3 +30,4 @@
     margin: 0 auto;
   }
 }
+
