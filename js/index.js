@@ -45,6 +45,24 @@
     });
   };
 
+  var openModal = function openModal(el, selector) {
+    var btnClose = selector.querySelector('.modal__close');
+    var overlay = document.querySelector('.overlay');
+
+    el.forEach(function (element) {
+      element.addEventListener('click', function (evt) {
+        evt.preventDefault;
+        selector.classList.add('modal--open');
+        overlay.classList.add('overlay--open');
+
+        btnClose.addEventListener('click', function () {
+          selector.classList.remove('modal--open');
+          overlay.classList.remove('overlay--open');
+        });
+      });
+    });
+  };
+
   getElem();
 
   var sliderPagination = function sliderPagination(element, current, count) {
@@ -176,8 +194,9 @@
   $reviewsList.slick({
     centerMode: true,
     arrows: false,
-    slidesToShow: 4,
+    slidesToShow: 3,
     focusOnSelect: true,
+    centerPadding: '150px',
     responsive: [{
       breakpoint: 1070,
       settings: {
@@ -195,6 +214,11 @@
       }
     }]
   });
+
+  var images = document.querySelectorAll('.reviews__item-img');
+  console.log(images);
+
+  // openReview(images);
   //
 
   // SLIDER-LIST SLIDER
@@ -268,5 +292,16 @@
     centerMode: false,
     focusOnSelect: true
   });
+
+  // Модалки
+  var propertyLinks = document.querySelectorAll('.property-link');
+  var propertyModal = document.querySelector('.modal--property');
+
+  openModal(propertyLinks, propertyModal);
+
+  var callModal = document.querySelector('.modal--сall');
+  var callLinks = document.querySelectorAll('.btn-call');
+
+  openModal(callLinks, callModal);
 
 }());
