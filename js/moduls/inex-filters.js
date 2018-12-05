@@ -1,10 +1,7 @@
 var inexFilters = (function (exports) {
   'use strict';
 
-  var filters = document.querySelectorAll('.slider__filter-item');
-  var subMenuArray = document.querySelectorAll('.slider__filter-sub-list');
-
-  var openSubMenu = function openSubMenu(it, value, i) {
+  var openSubMenu = function openSubMenu(it, value, i, subMenuArray) {
     var subMenu = it.querySelector('.slider__filter-sub-list');
     if (subMenu == null) return;
 
@@ -35,12 +32,12 @@ var inexFilters = (function (exports) {
     });
   };
 
-  var getElem = function getElem() {
+  var getElem = function getElem(filters, subMenuArray) {
     filters.forEach(function (it, i) {
       it.addEventListener('click', function () {
         var value = it.querySelector('span');
         if (value == null) return;
-        openSubMenu(it, value, i);
+        openSubMenu(it, value, i, subMenuArray);
       });
     });
   };

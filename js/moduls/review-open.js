@@ -1,4 +1,4 @@
-(function () {
+var reviewOpen = (function (exports) {
   'use strict';
 
   var openReview = function openReview(list) {
@@ -23,7 +23,8 @@
     });
   };
 
-  var reviewList = document.querySelector('.page-reviews__list');
-  openReview(reviewList);
+  exports.openReview = openReview;
 
-}());
+  return exports;
+
+}({}));

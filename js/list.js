@@ -1,6 +1,7 @@
 (function () {
   'use strict';
 
+  // оставляю на твоей совести, сюда лезть не буду переделывать
   var listHeandler = document.querySelector(".object-list-radio");
   var radioList = document.querySelector("#object-radio-list-00");
   var radioListPhoto = document.querySelector("#object-radio-list-01");
@@ -32,5 +33,6 @@
   listHeandler.addEventListener("change", function () {
     changeList();
   });
+  //
 
 }());

@@ -1,22 +1,6 @@
 (function () {
   'use strict';
 
-  // {
-  //   "type": "Feature",
-  //   "id" = 0,
-  //   "geometry": {
-  //     "type": "Point",
-  //     "coordinates": [55.858585, 37.48498],
-  //     "properties": {
-  //       "balloonContent": "Содержимое балуна",
-  //       "clusterCaption": "Еще одна метка",
-  //       "hintContent": "Текст подсказки"
-  //     }
-  //   }
-  // };
-
-  // временный мок, взят с яндекса(переработан под автозаполнение)
-
   var map = document.querySelector('#map');
 
   ymaps.ready(function () {
@@ -65,8 +49,8 @@
       } else {
         obj.properties.balloonContent = "Идет загрузка данных...";
         objectManager.objects.balloon.open(objectId);
-        loadBalloonData(objectId).then(function (data$$1) {
-          obj.properties.balloonContent = data$$1;
+        loadBalloonData(objectId).then(function (data) {
+          obj.properties.balloonContent = data;
           objectManager.objects.balloon.setData(obj);
         });
       }
@@ -93,9 +77,9 @@
 
     // Нужно перепилить под загрузку с сервера
     $.ajax({
-      url: "https://089ax.000webhostapp.com/data.json"
-    }).done(function (data$$1) {
-      objectManager.add(data$$1);
+      url: "data.json"
+    }).done(function (data) {
+      objectManager.add(data);
     });
   });
 

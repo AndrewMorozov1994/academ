@@ -1,10 +1,7 @@
 (function () {
   'use strict';
 
-  var filters = document.querySelectorAll('.slider__filter-item');
-  var subMenuArray = document.querySelectorAll('.slider__filter-sub-list');
-
-  var openSubMenu = function openSubMenu(it, value, i) {
+  var openSubMenu = function openSubMenu(it, value, i, subMenuArray) {
     var subMenu = it.querySelector('.slider__filter-sub-list');
     if (subMenu == null) return;
 
@@ -35,35 +32,95 @@
     });
   };
 
-  var getElem = function getElem() {
+  var getElem = function getElem(filters, subMenuArray) {
     filters.forEach(function (it, i) {
       it.addEventListener('click', function () {
         var value = it.querySelector('span');
         if (value == null) return;
-        openSubMenu(it, value, i);
+        openSubMenu(it, value, i, subMenuArray);
       });
+    });
+  };
+
+  var openReview = function openReview(list) {
+    var overlay = document.querySelector('.overlay');
+    var popup = document.querySelector('.reviews-open');
+
+    list.addEventListener('click', function (evt) {
+      var target = evt.target.closest('li');
+      if (!target) {
+        return;
+      } else {
+        overlay.classList.add('overlay--open');
+        popup.style.top = window.pageYOffset + 20 + 'px';
+        popup.querySelector('img').src = target.querySelector('img').src;
+        popup.classList.add('reviews-open--hide');
+      }
+    });
+
+    overlay.addEventListener('click', function () {
+      popup.classList.remove('reviews-open--hide');
+      overlay.classList.remove('overlay--open');
     });
   };
 
   var openModal = function openModal(el, selector) {
     var btnClose = selector.querySelector('.modal__close');
     var overlay = document.querySelector('.overlay');
+    var form = selector.querySelector('form');
+    var inputName = form.querySelector('.name');
+    var inputPhone = form.querySelector('.phone');
+    var error = form.querySelector('.modal__error');
+    var btnSubmit = form.querySelector('.modal__submit');
+
+    var closePopup = function closePopup() {
+      selector.classList.remove('modal--open');
+      overlay.classList.remove('overlay--open');
+
+      if (error.classList.contains('modal__error--open')) {
+        error.classList.remove('modal__error--open');
+      }
+    };
+
+    var validity = function validity() {
+      if (!inputName.valueMissing || !inputPhone.valueMissing) {
+        error.classList.add('modal__error--open');
+      }
+    };
 
     el.forEach(function (element) {
       element.addEventListener('click', function (evt) {
-        evt.preventDefault;
+        evt.preventDefault();
+
         selector.classList.add('modal--open');
         overlay.classList.add('overlay--open');
 
-        btnClose.addEventListener('click', function () {
-          selector.classList.remove('modal--open');
-          overlay.classList.remove('overlay--open');
+        selector.style.left = document.documentElement.offsetWidth / 2 - selector.offsetWidth / 2 + "px";
+        selector.style.top = window.pageYOffset + 50 + "px";
+
+        btnClose.addEventListener('click', closePopup);
+
+        overlay.addEventListener('click', function (evt) {
+          if (evt.target == selector) return;
+          closePopup();
+        });
+
+        btnSubmit.addEventListener('click', function () {
+          validity();
+        });
+
+        form.addEventListener('submit', function (evt) {
+          evt.preventDefault();
+          closePopup();
+          form.reset();
         });
       });
     });
   };
 
-  getElem();
+  var filters = document.querySelectorAll('.slider__filter-item');
+  var subMenuArray = document.querySelectorAll('.slider__filter-sub-list');
+  getElem(filters, subMenuArray);
 
   var sliderPagination = function sliderPagination(element, current, count) {
     element.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
@@ -110,37 +167,39 @@
   //
 
   // SPECIAL SLIDER
-  var $slickElement = $('.special__list');
-  var $current = $('.special__number-active');
-  var $count = $('.special__number-lenght');
+  var specialSlider = function specialSlider() {
+    var $slickElement = $('.special__list');
+    var $current = $('.special__number-active');
+    var $count = $('.special__number-lenght');
 
-  $('.special__list').slick({
-    arrows: true,
-    appendArrows: $('.special__btn-wrapper'),
-    nextArrow: '<button class="special__btn arrow-btn special__btn--next"><span class="visually-hidden">Вперед</span></button>',
-    prevArrow: '<button class="special__btn arrow-btn special__btn--back"><span class="visually-hidden">Назад</span></button>',
-    dots: true,
-    infinite: false,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    responsive: [{
-      breakpoint: 1070,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    }, {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true
-      }
-    }]
+    $('.special__list').slick({
+      arrows: true,
+      appendArrows: $('.special__btn-wrapper'),
+      nextArrow: '<button class="special__btn arrow-btn special__btn--next"><span class="visually-hidden">Вперед</span></button>',
+      prevArrow: '<button class="special__btn arrow-btn special__btn--back"><span class="visually-hidden">Назад</span></button>',
+      dots: false,
+      infinite: false,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      responsive: [{
+        breakpoint: 1070,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      }, {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true
+        }
+      }]
 
-  });
+    });
 
-  sliderPagination($slickElement, $current, $count);
+    sliderPagination($slickElement, $current, $count);
+  };
   //
 
   // PEOPLE LIST SLIDER
@@ -217,10 +276,9 @@
     }]
   });
 
-  var images = document.querySelectorAll('.reviews__item-img');
-  console.log(images);
+  var reviews = document.querySelector('.reviews__list');
 
-  // openReview(images);
+  openReview(reviews);
   //
 
   // SLIDER-LIST SLIDER
@@ -287,5 +345,12 @@
   var callLinks = document.querySelectorAll('.btn-call');
 
   openModal(callLinks, callModal);
+
+  var mortgageLink = document.querySelectorAll('.mortgage-link');
+  var mortgageModal = document.querySelector('.modal--mortgage');
+
+  openModal(mortgageLink, mortgageModal);
+
+  specialSlider();
 
 }());
