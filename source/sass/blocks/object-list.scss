@@ -679,6 +679,15 @@
   }
 
   .object-hover {
-    display: block;
+    display: none;
   }
+
+  .object-list__item {
+    &:hover {
+      .object-hover {
+        display: block;
+      }
+    }
+  }
+
 }
