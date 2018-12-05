@@ -23,7 +23,7 @@ gulp.task("style", function() {
 gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
 
   gulp.task(`scripts`, () => {
-    return gulp.src('source/js/*.js')
+    return gulp.src('source/js/**/*.js')
       .pipe(plumber())
       .pipe(rollup({
         plugins: [
@@ -48,16 +48,23 @@ gulp.task(`copy-img`, () => {
 });
 
 gulp.task(`copy-fonts`, () => {
-  return gulp.src(`source/fonts/*.{woff,woff2}`).
+  return gulp.src(`source/fonts/*.{woff,woff2,ttf}`).
     pipe(gulp.dest(`build/fonts`));
 });
 
-gulp.task(`copy`, [`copy-html`, `copy-fonts`, `copy-img`, `scripts`, `style`], () => {
+// Шрифты и ajax-loader для SLICK'а
+gulp.task(`copy-slick`, () => {
+  return gulp.src(`source/slick/**/*.{woff,ttf,gif}`).
+    pipe(gulp.dest(`build/css`));
+});
+// 
+
+gulp.task(`copy`, [`copy-html`, `copy-fonts`, `copy-img`, `scripts`, `style`, `copy-slick`], () => {
 });
 
 
 gulp.task(`copy-html`, () => {
-  return gulp.src(`source/*.{html,ico}`).
+  return gulp.src(`source/*.{html,ico,json}`).
   pipe(gulp.dest(`build`)).
   pipe(server.stream());
 });

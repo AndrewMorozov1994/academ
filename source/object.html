@@ -127,7 +127,7 @@
             <p class="object__char-item-title"><span class="object__char-item-m2">29 808</span> р. за м2</p>
           </li>
           <li class="object__char-item">
-            <button class="main-btn object__char-item-btn">Оставить заявку</button>
+            <button class="main-btn object__char-item-btn btn-call">Оставить заявку</button>
           </li>
         </ul>
         <div class="object__consultant">
@@ -211,7 +211,7 @@
         <div class="special__item-hover-wrapper bbb">
           <!-- <button class="special__item-btn arrow-btn special__item-btn--back"><span class="visually-hidden">Назад</span></button>
           <button class="special__item-btn arrow-btn special__item-btn--next"><span class="visually-hidden">Вперел</span></button> -->
-          <p class="special__item-photo"><span class="special__item-number color-green rr">3</span> фото из <span class="special__item-number color-green special__item-number1 rrr">12</span> </p>
+          <p class="special__item-photo"><span class="special__item-number color-green rr">01</span> фото из <span class="special__item-number color-green special__item-number1 rrr">03</span> </p>
         </div>
         <div class="special__item-description-wrapper">
           <div class="special__name-wrapper">
@@ -240,7 +240,7 @@
         <div class="special__item-hover-wrapper">
           <!-- <button class="special__item-btn arrow-btn special__item-btn--back"><span class="visually-hidden">Назад</span></button>
           <button class="special__item-btn arrow-btn special__item-btn--next"><span class="visually-hidden">Вперел</span></button> -->
-          <p class="special__item-photo"><span class="special__item-number color-green">3</span> фото из <span class="special__item-number color-green special__item-number1">12</span> </p>
+          <p class="special__item-photo"><span class="special__item-number color-green">01</span> фото из <span class="special__item-number color-green special__item-number1">03</span> </p>
         </div>
         <div class="special__item-description-wrapper">
           <div class="special__name-wrapper">
@@ -265,7 +265,7 @@
         <div class="special__item-hover-wrapper">
           <!-- <button class="special__item-btn arrow-btn special__item-btn--back"><span class="visually-hidden">Назад</span></button>
           <button class="special__item-btn arrow-btn special__item-btn--next"><span class="visually-hidden">Вперел</span></button> -->
-          <p class="special__item-photo"><span class="special__item-number color-green">3</span> фото из <span class="special__item-number color-green special__item-number1">12</span> </p>
+          <p class="special__item-photo"><span class="special__item-number color-green">01</span> фото из <span class="special__item-number color-green special__item-number1">02</span> </p>
         </div>
         <div class="special__item-description-wrapper">
           <div class="special__name-wrapper">
@@ -290,7 +290,7 @@
         <div class="special__item-hover-wrapper">
           <!-- <button class="special__item-btn arrow-btn special__item-btn--back"><span class="visually-hidden">Назад</span></button>
           <button class="special__item-btn arrow-btn special__item-btn--next"><span class="visually-hidden">Вперел</span></button> -->
-          <p class="special__item-photo"><span class="special__item-number color-green">3</span> фото из <span class="special__item-number special__item-number1 color-green">12</span> </p>
+          <p class="special__item-photo"><span class="special__item-number color-green">01</span> фото из <span class="special__item-number special__item-number1 color-green">02</span> </p>
         </div>
         <div class="special__item-description-wrapper">
           <div class="special__name-wrapper">
@@ -315,7 +315,7 @@
         <div class="special__item-hover-wrapper">
           <!-- <button class="special__item-btn arrow-btn special__item-btn--back"><span class="visually-hidden">Назад</span></button>
           <button class="special__item-btn arrow-btn special__item-btn--next"><span class="visually-hidden">Вперел</span></button> -->
-          <p class="special__item-photo"><span class="special__item-number color-green">3</span> фото из <span class="special__item-number color-green special__item-number1">12</span> </p>
+          <p class="special__item-photo"><span class="special__item-number color-green">01</span> фото из <span class="special__item-number color-green special__item-number1">02</span> </p>
         </div>
         <div class="special__item-description-wrapper">
           <div class="special__name-wrapper">
@@ -329,7 +329,7 @@
     </ul>
     <div class="special__btn-wrapper">
       <!-- <button class="special__btn arrow-btn special__btn--back"><span class="visually-hidden">Назад</span></button> -->
-      <p class="special__number"><span class="color-green special__number-active">01 / </span><span class="special__number-lenght"> 04</span></p>
+      <p class="special__number"><span class="color-green special__number-active">01</span><span class="color-green"> /</span><span class="news__number-lenght">05</span></p>
       <!-- <button class="special__btn arrow-btn special__btn--next"><span class="visually-hidden">Вперед</span></button> -->
     </div>
   </section>
@@ -338,7 +338,7 @@
     <div class="consultation-wrapper">
       <p class="consultation__title">получите консультацию бесплатно!</p>
       <p class="consultation__description">Обратитесь к нашим специалистам, и мы подскажем лучшее решение!</p>
-      <a class="consultation__btn main-btn" href="#">Получить консультацию</a>
+      <a class="consultation__btn main-btn btn-call" href="#">Получить консультацию</a>
     </div>
   </section>
   </main>
@@ -383,12 +383,40 @@
         </section>
     </div>
   </footer>
+  <div class="overlay"></div>
+  <section class="modal modal--сall">
+    <div class="modal__wrapper">
+      <h2 class="modal__title">Перезвоните мне</h2>
+      <button class="modal__close"></button>
+      <form action="#" class="modal__form">
+          <label class="modal__item label">
+            <input type="text" class="name" placeholder="Имя*" required>
+          </label>
+          <label class="modal__item label">
+            <input type="tel" class="phone" placeholder="Телефон*" required>
+          </label>
+          <div class="modal__error">
+            <p>Вы не заполнили обязательные поля</p>
+          </div>
+          <div class="modal__capcha">
+            <img src="img/capcha.png" alt="капча">
+          </div>
+          <button type="submit" class="modal__submit">Отправить</button>
+          <label class="modal__consent">
+            <input type="checkbox" checked>
+            <div class="checkbox-btn"></div>
+            <p>Я даю согласие на обработку персональных данных</p>
+          </label>
+      </form>
+    </div>
+  </section>
+
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="js/slick.min.js"></script>
+  <script src="js/moduls/slick.min.js"></script>
   <script src="js/object.js"></script>
-  <script src="js/index.js"></script>
-  <script src="js/menu.js"></script>
-  <script src="js/map.js"></script>
+  <script src="js/moduls/call-modal.js"></script>
+  <script src="js/moduls/menu.js"></script>
+  <script src="js/moduls/map.js"></script>
 </body>
 </html>

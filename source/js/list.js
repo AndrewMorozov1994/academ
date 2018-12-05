@@ -1,3 +1,4 @@
+// оставляю на твоей совести, сюда лезть не буду переделывать
 const listHeandler = document.querySelector(`.object-list-radio`);
 const radioList = document.querySelector(`#object-radio-list-00`);
 const radioListPhoto = document.querySelector(`#object-radio-list-01`);
@@ -29,4 +30,5 @@ var changeList = () => {
 listHeandler.addEventListener(`change`, () => {
   changeList();
 });
+// 
 

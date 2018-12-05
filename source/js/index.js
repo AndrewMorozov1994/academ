@@ -1,8 +1,10 @@
-import {getElem} from './inex-filters.js';
-import {openReview} from './reviews.js';
-import {openModal} from './modal.js';
+import {getElem} from './moduls/inex-filters.js';
+import {openReview} from './moduls/review-open.js';
+import {openModal} from './moduls/modal.js';
 
-getElem();
+const filters = document.querySelectorAll('.slider__filter-item');
+const subMenuArray = document.querySelectorAll('.slider__filter-sub-list');
+getElem(filters, subMenuArray);
 
 const sliderPagination = (element, current, count) => {
   element.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
@@ -50,39 +52,41 @@ $specialItemSliders.each(function() {
 //
 
 // SPECIAL SLIDER
-const $slickElement = $('.special__list');
-const $current = $('.special__number-active');
-const $count = $('.special__number-lenght');
+const specialSlider = () => {
+  const $slickElement = $('.special__list');
+  const $current = $('.special__number-active');
+  const $count = $('.special__number-lenght');
 
-$('.special__list').slick({
-  arrows: true,
-  appendArrows: $('.special__btn-wrapper'),
-  nextArrow: '<button class="special__btn arrow-btn special__btn--next"><span class="visually-hidden">Вперед</span></button>',
-  prevArrow: '<button class="special__btn arrow-btn special__btn--back"><span class="visually-hidden">Назад</span></button>',
-  dots: true,
-  infinite: false,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1070,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true
-      }
-    }]
+  $('.special__list').slick({
+    arrows: true,
+    appendArrows: $('.special__btn-wrapper'),
+    nextArrow: '<button class="special__btn arrow-btn special__btn--next"><span class="visually-hidden">Вперед</span></button>',
+    prevArrow: '<button class="special__btn arrow-btn special__btn--back"><span class="visually-hidden">Назад</span></button>',
+    dots: true,
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1070,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true
+        }
+      }]
 
-});
+  });
 
-sliderPagination($slickElement, $current, $count);
+  sliderPagination($slickElement, $current, $count);
+}
 //
 
 // PEOPLE LIST SLIDER
@@ -161,12 +165,11 @@ $reviewsList.slick({
         centerPadding: '40px'
       }
     }]
-})
+});
 
-const images = document.querySelectorAll('.reviews__item-img');
-console.log(images);
+const reviews = document.querySelector('.reviews__list');
 
-// openReview(images);
+openReview(reviews);
 //
 
 // SLIDER-LIST SLIDER
@@ -227,3 +230,10 @@ const callModal = document.querySelector('.modal--сall');
 const callLinks = document.querySelectorAll('.btn-call');
 
 openModal(callLinks, callModal);
+
+const mortgageLink = document.querySelectorAll('.mortgage-link');
+const mortgageModal = document.querySelector('.modal--mortgage');
+
+openModal(mortgageLink, mortgageModal);
+
+specialSlider();
