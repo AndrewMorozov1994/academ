@@ -96,7 +96,7 @@
     <div class="consultation-wrapper">
       <p class="consultation__title">получите консультацию бесплатно!</p>
       <p class="consultation__description">Обратитесь к нашим специалистам, и мы подскажем лучшее решение!</p>
-      <a class="consultation__btn main-btn" href="#">Получить консультацию</a>
+      <a class="consultation__btn main-btn btn-call" href="#">Получить консультацию</a>
     </div>
   </section>
   </main>
@@ -141,9 +141,36 @@
         </section>
     </div>
   </footer>
+  <div class="overlay"></div>
+  <section class="modal modal--сall">
+    <div class="modal__wrapper">
+      <h2 class="modal__title">Перезвоните мне</h2>
+      <button class="modal__close"></button>
+      <form action="#" class="modal__form">
+          <label class="modal__item label">
+            <input type="text" class="name" placeholder="Имя*" required>
+          </label>
+          <label class="modal__item label">
+            <input type="tel" class="phone" placeholder="Телефон*" required>
+          </label>
+          <div class="modal__error">
+             <p>Вы не заполнили одно обязательное поле</p>
+          </div>
+          <div class="modal__capcha">
+            <img src="img/capcha.png" alt="капча">
+          </div>
+          <button type="submit" class="modal__submit">Отправить</button>
+          <label class="modal__consent">
+            <input type="checkbox" checked>
+            <div class="checkbox-btn"></div>
+            <p>Я даю согласие на обработку персональных данных</p>
+          </label>
+      </form>
+    </div>
+  </section>
 
-  <script src="js/menu.js"></script>
-  <script src="js/map.js"></script>
+  <script src="js/moduls/menu.js"></script>
+  <script src="js/contacts.js"></script>
 
 </body>
 </html>

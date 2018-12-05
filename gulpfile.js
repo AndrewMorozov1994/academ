@@ -23,7 +23,7 @@ gulp.task("style", function() {
 gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
 
   gulp.task(`scripts`, () => {
-    return gulp.src('source/js/*.js')
+    return gulp.src('source/js/**/*.js')
       .pipe(plumber())
       .pipe(rollup({
         plugins: [
@@ -48,7 +48,7 @@ gulp.task(`copy-img`, () => {
 });
 
 gulp.task(`copy-fonts`, () => {
-  return gulp.src(`source/fonts/*.{woff,woff2}`).
+  return gulp.src(`source/fonts/*.{woff,woff2,ttf}`).
     pipe(gulp.dest(`build/fonts`));
 });
 

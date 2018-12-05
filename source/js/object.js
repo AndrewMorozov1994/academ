@@ -1,3 +1,12 @@
+const sliderPagination = (element, current, count) => {
+  element.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+    //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+    var i = (currentSlide ? currentSlide : 0) + 1;
+    current.text('0' + i);
+    count.text('0' + slick.slideCount);
+    return false;
+  });
+}
 
 const $objectSlide = $('.object__slide');
 const $objectSlideList = $('.object__slide-list');
@@ -18,11 +27,56 @@ $objectSlideList.slick({
   focusOnSelect: true
 });
 
-const $her = $('.special__item-img-wrapper');
+const specialSlider = () => {
+  const $slickElement = $('.special__list');
+  const $current = $('.special__number-active');
+  const $count = $('.special__number-lenght');
 
-$her.slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  fade: true
-});
+  $('.special__list').slick({
+    arrows: true,
+    appendArrows: $('.special__btn-wrapper'),
+    nextArrow: '<button class="special__btn arrow-btn special__btn--next"><span class="visually-hidden">Вперед</span></button>',
+    prevArrow: '<button class="special__btn arrow-btn special__btn--back"><span class="visually-hidden">Назад</span></button>',
+    dots: true,
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1070,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true
+        }
+      }]
+
+  });
+
+  sliderPagination($slickElement, $current, $count);
+}
+
+specialSlider();
+
+const $specialItemSliders = $('.special__item-img-wrapper');
+
+$specialItemSliders.each(function() {
+  $(this).slick({
+    arrows: true,
+    draggable: false,
+    swipe: false,
+    appendArrows: $(this).parents('.special__item').find('.special__item-hover-wrapper'),
+    prevArrow: '<button class="special__item-btn arrow-btn special__item-btn--back"><span class="visually-hidden">Назад</span></button>',
+    nextArrow: '<button class="special__item-btn arrow-btn special__item-btn--next"><span class="visually-hidden">Вперел</span></button>'
+  });
+  const item = $(this).parents('.special__item').find('.special__item-number');
+  const ite = $(this).parents('.special__item').find('.special__item-number1');
+  sliderPagination($(this), item, ite);
+})

@@ -1,6 +1,3 @@
-import {data} from './data.js';
-
-let arrayOfFeatures = [];
 let map = document.querySelector(`#map`);
 
 ymaps.ready(() => {

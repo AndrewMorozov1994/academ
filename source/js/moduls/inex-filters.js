@@ -1,7 +1,4 @@
-const filters = document.querySelectorAll('.slider__filter-item');
-const subMenuArray = document.querySelectorAll('.slider__filter-sub-list')
-
-const openSubMenu = (it, value, i) => {
+const openSubMenu = (it, value, i, subMenuArray) => {
   const subMenu = it.querySelector('.slider__filter-sub-list');
   if(subMenu == null) return;
 
@@ -33,12 +30,12 @@ const changeValue = (item, value) => {
       })
 }
 
-export const getElem = () => {
+export const getElem = (filters, subMenuArray) => {
   filters.forEach((it, i) => {
     it.addEventListener('click', () => {
       const value = it.querySelector('span');
       if (value == null) return;
-      openSubMenu(it, value, i);
+      openSubMenu(it, value, i, subMenuArray);
 
     })
 

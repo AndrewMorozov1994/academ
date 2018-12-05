@@ -73,10 +73,30 @@
     <p class="object-list__description">Более 9 755 квартир в базе вторичного жилья и 16 528 квартир в новостройках</p>
     <div class="object-list-filter">
       <ul class="object-list-filter__list list-style-none">
-        <li class="object-list-filter__item"><span>Квартира</span></li>
-        <li class="object-list-filter__item"><span>Продать</span></li>
-        <li class="object-list-filter__item"><span>Город</span></li>
-        <li class="object-list-filter__item"><span>Район</span></li>
+        <li class="object-list-filter__item"><span>Квартира</span>
+          <ul class="slider__filter-sub-list list-style-none">
+            <li class="slider__filter-sub-item">Тест1</li>
+            <li class="slider__filter-sub-item">Тест2</li>
+          </ul>
+        </li>
+        <li class="object-list-filter__item"><span>Продать</span>
+          <ul class="slider__filter-sub-list list-style-none">
+            <li class="slider__filter-sub-item">Тест1</li>
+            <li class="slider__filter-sub-item">Тест2</li>
+          </ul>
+        </li>
+        <li class="object-list-filter__item"><span>Город</span>
+          <ul class="slider__filter-sub-list list-style-none">
+            <li class="slider__filter-sub-item">Тест1</li>
+            <li class="slider__filter-sub-item">Тест2</li>
+          </ul>
+        </li>
+        <li class="object-list-filter__item"><span>Район</span>
+          <ul class="slider__filter-sub-list list-style-none">
+            <li class="slider__filter-sub-item">Тест1</li>
+            <li class="slider__filter-sub-item">Тест2</li>
+          </ul>
+        </li>
       </ul>
       <div class="object-list-filter-line-wrapper">
         <div class="object-list-filter-price">
@@ -291,7 +311,7 @@
     <div class="consultation-wrapper">
       <p class="consultation__title">получите консультацию бесплатно!</p>
       <p class="consultation__description">Обратитесь к нашим специалистам, и мы подскажем лучшее решение!</p>
-      <a class="consultation__btn main-btn" href="#">Получить консультацию</a>
+      <a class="consultation__btn main-btn btn-call" href="#">Получить консультацию</a>
     </div>
   </section>
   </main>
@@ -336,11 +356,40 @@
         </section>
     </div>
   </footer>
+  <div class="overlay"></div>
+  <section class="modal modal--сall">
+    <div class="modal__wrapper">
+      <h2 class="modal__title">Перезвоните мне</h2>
+      <button class="modal__close"></button>
+      <form action="#" class="modal__form">
+          <label class="modal__item label">
+            <input type="text" class="name" placeholder="Имя*" required>
+          </label>
+          <label class="modal__item label">
+            <input type="tel" class="phone" placeholder="Телефон*" required>
+          </label>
+          <div class="modal__error">
+             <p>Вы не заполнили одно обязательное поле</p>
+          </div>
+          <div class="modal__capcha">
+            <img src="img/capcha.png" alt="капча">
+          </div>
+          <button type="submit" class="modal__submit">Отправить</button>
+          <label class="modal__consent">
+            <input type="checkbox" checked>
+            <div class="checkbox-btn"></div>
+            <p>Я даю согласие на обработку персональных данных</p>
+          </label>
+      </form>
+    </div>
+  </section>
+
+  <script src="js/moduls/call-modal.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="js/slick.min.js"></script>
-  <script src="js/object.js"></script>
-  <script src="js/menu.js"></script>
+  <script src="js/moduls/slick.min.js"></script>
+  <script src="js/moduls/menu.js"></script>
+  <script src="js/object-list.js"></script>
   <script src="js/list.js"></script>
 </body>
 </html>

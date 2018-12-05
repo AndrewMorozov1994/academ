@@ -90,6 +90,11 @@
   }
 }
 
+.slider__filter-sub-item {
+  padding: 20px;
+  background-color: #e1e1e1;
+}
+
 .slider__filter-list {
   width: 90%;
   position: absolute;
@@ -293,6 +298,7 @@
 
   .slider__filter-sub-item {
     padding: 5px 0 5px 20px;
+    background-color: #fff;
 
     &:hover {
       background-color: #e6fff1;
