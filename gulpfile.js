@@ -54,10 +54,10 @@ gulp.task(`copy-fonts`, () => {
 
 // Шрифты и ajax-loader для SLICK'а
 gulp.task(`copy-slick`, () => {
-  return gulp.src(`source/slick/**/*.{woff,ttf,gif}`).
+  return gulp.src(`source/slick/**/*.{woff,ttf,gif,css}`).
     pipe(gulp.dest(`build/css`));
 });
-// 
+//
 
 gulp.task(`copy`, [`copy-html`, `copy-fonts`, `copy-img`, `scripts`, `style`, `copy-slick`], () => {
 });

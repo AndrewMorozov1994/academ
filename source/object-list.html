@@ -12,6 +12,7 @@
   <meta name="msapplication-TileColor" content="#ffc40d">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
   <title>ЦН “Академический”</title>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=bfdf0586-3c44-47af-9070-a91f11ab6a8a&lang=ru_RU" type="text/javascript"></script>
   <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
@@ -106,22 +107,22 @@
             <input class="object-list-filter-price-max" type="text" pattern="[0-9]" id="maxCost" value="213 212">
           </div>
 
-          <div class="object-list-filter__line">
-            <button class="object-list-filter__btn object-list-filter__btn--left"></button>
+          <div id="slider_price" class="object-list-filter__line">
+            <!-- <button class="object-list-filter__btn object-list-filter__btn--left"></button>
             <div class="object-list-filter-active"></div>
-            <button class="object-list-filter__btn object-list-filter__btn--right"></button>
+            <button class="object-list-filter__btn object-list-filter__btn--right"></button> -->
           </div>
         </div>
         <div class="object-list-filter-m2">
           <p class="object-list-filter-price__title">Площадь, м2</p>
           <div class="object-list-filter-price-wrapper">
-            <input class="object-list-filter-price-min" type="text" pattern="[0-9]" value="213 212">
-            <input class="object-list-filter-price-max" type="text" pattern="[0-9]" value="213 212">
+            <input class="object-list-filter-price-min" type="text" pattern="[0-9]" id="sqMin" value="213 212">
+            <input class="object-list-filter-price-max" type="text" pattern="[0-9]" id="sqMax" value="213 212">
           </div>
-          <div class="object-list-filter__line">
-            <button class="object-list-filter__btn object-list-filter__btn--left"></button>
+          <div id="sq" class="object-list-filter__line">
+            <!-- <button class="object-list-filter__btn object-list-filter__btn--left"></button>
             <div class="object-list-filter-active"></div>
-            <button class="object-list-filter__btn object-list-filter__btn--right"></button>
+            <button class="object-list-filter__btn object-list-filter__btn--right"></button> -->
           </div>
         </div>
       </div>
@@ -182,8 +183,8 @@
             </div>
           </div>
           <div class="special__item-hover-wrapper bbb object-hover">
-            <button class="special__item-btn arrow-btn special__item-btn--back"><span class="visually-hidden">Назад</span></button>
-            <button class="special__item-btn arrow-btn special__item-btn--next"><span class="visually-hidden">Вперел</span></button>
+            <!-- <button class="special__item-btn arrow-btn special__item-btn--back"><span class="visually-hidden">Назад</span></button>
+            <button class="special__item-btn arrow-btn special__item-btn--next"><span class="visually-hidden">Вперел</span></button> -->
             <p class="special__item-photo"><span class="special__item-number color-green rr">1</span> фото из <span class="special__item-number color-green special__item-number1 rrr">3</span> </p>
           </div>
         </div>
@@ -388,6 +389,7 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="js/moduls/slick.min.js"></script>
+  <script src="js/moduls/jquery-ui.min.js"></script>
   <script src="js/moduls/menu.js"></script>
   <script src="js/object-list.js"></script>
   <script src="js/list.js"></script>

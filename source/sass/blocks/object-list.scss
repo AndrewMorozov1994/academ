@@ -78,15 +78,6 @@
   width: 100%;
   max-width: 475px;
   height: 42px;
-  &::before {
-    position: absolute;
-    content: '';
-    left: 0;
-    right: 0;
-    top: 20px;
-    height: 3px;
-    background-color: #bdecd0;
-  }
 }
 
 .object-list-filter__btn {
