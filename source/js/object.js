@@ -37,8 +37,8 @@ const specialSlider = () => {
     appendArrows: $('.special__btn-wrapper'),
     nextArrow: '<button class="special__btn arrow-btn special__btn--next"><span class="visually-hidden">Вперед</span></button>',
     prevArrow: '<button class="special__btn arrow-btn special__btn--back"><span class="visually-hidden">Назад</span></button>',
-    dots: true,
-    infinite: false,
+    dots: false,
+    infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
