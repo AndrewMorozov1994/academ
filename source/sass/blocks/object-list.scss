@@ -493,6 +493,9 @@
 }
 
 @media (min-width: 1170px) {
+  .object-list__item-img {
+    position: relative;
+  }
   .object-list-filter-line-wrapper {
     display: flex;
     justify-content: space-between;

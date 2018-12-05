@@ -178,7 +178,7 @@
     width: 23,54%;
   }
 
-  .special__item {
+  .special__item-wr {
     position: relative;
 
     &:hover > .special__item-hover-wrapper {
@@ -199,7 +199,7 @@
 
   .special__item-btn {
     position: absolute;
-    top: 150px;
+    bottom: 38%;
     left: 0;
 
     &--next {
@@ -216,7 +216,7 @@
     color: white;
     background: rgba(0,0,0,0.5);
     border-radius: 30px;
-    bottom: calc(46%);
+    bottom: 0;
     left: calc(50% - 60px);
   }
 
