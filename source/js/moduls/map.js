@@ -74,7 +74,7 @@ ymaps.ready(() => {
 
   // Нужно перепилить под загрузку с сервера
   $.ajax({
-    url: "https://089ax.000webhostapp.com/data.json"
+    url: "data.json"
   }).done((data) => {
       objectManager.add(data);
     });
