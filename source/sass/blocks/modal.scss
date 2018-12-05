@@ -102,10 +102,23 @@
     margin: 0;
     align-self: center;
     margin-left: 100px;
+    position: relative;
+
+    &::before {
+      display: block;
+      width: 30px;
+      height: 30px;
+      content: "";
+      position: absolute;
+      background: no-repeat center url("../img/error.png");
+      background-size: contain;
+      left: -50px;
+    }
   }
 
   &--open {
     display: flex;
+    justify-content: center;
   }
 }
 
@@ -359,7 +372,14 @@
     margin-top: 100px;
 
     p {
-      margin-left: 150px;
+      margin-left: 60px;
+
+      &::before {
+        width: 51px;
+        height: 51px;
+        top: -11px;
+        left: -100px
+      }
     }
   }
 
