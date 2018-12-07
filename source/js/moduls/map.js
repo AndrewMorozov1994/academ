@@ -18,9 +18,11 @@ ymaps.ready(() => {
   });
   //
 
-  var customBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+  const customBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
     '<section class="wrapper">' +
-      '<img class="baloon__img" src="$[properties.img]">' +
+      '<a class="baloon__img" href="$[properties.link]">' +
+        '<img class="baloon__img" src="$[properties.img]">' +
+      '</a>' +
       '<div class="baloon__info-wrapper">' +
         '<h4 class="baloon__title">$[properties.name]</h4>' +
         '<p class="baloon__price"><span>$[properties.price]</span> р.</p>' +
@@ -28,7 +30,26 @@ ymaps.ready(() => {
     '</section>', {}
   );
 
-  objectManager.objects.options.set('balloonContentLayout', customBalloonContentLayout)
+  const customBalloonClustersLayout = ymaps.templateLayoutFactory.createClass(
+    '<ul class="list">'+
+    '{% for geoObject in properties.geoObjects %}'+
+      '<li class="list__item">' +
+        '<section class="list__wrapper">' +
+          '<a href="$[properties.link]">' +
+            '<img class="baloon__img" src="$[geoObject.properties.img]">' +
+          '</a>' +
+          '<div class="baloon__info-wrapper">' +
+            '<h4 class="baloon__title">$[geoObject.properties.name]</h4>' +
+            '<p class="baloon__price"><span>$[geoObject.properties.price]</span> р.</p>' +
+          '</div>' +
+        '</section>' +
+      '</li>'+
+    '{% endfor %}'+
+    '</ul>'
+  )
+
+  objectManager.objects.options.set('balloonContentLayout', customBalloonContentLayout);
+  objectManager.clusters.options.set('balloonContentLayout', customBalloonClustersLayout);
   objectManager.clusters.options.set('preset', 'islands#darkgreenClusterIcons');
 
   // Отрисовка на карте
@@ -59,7 +80,6 @@ ymaps.ready(() => {
           objectManager.objects.balloon.open(objectId);
           loadBalloonData(objectId).then(function (data) {
               obj.properties.balloonContent = data;
-              console.log(data  );
               objectManager.objects.balloon.setData(obj);
           });
       }
