@@ -18,6 +18,17 @@ ymaps.ready(() => {
   });
   //
 
+  var customBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+    '<section class="wrapper">' +
+      '<img class="baloon__img" src="$[properties.img]">' +
+      '<div class="baloon__info-wrapper">' +
+        '<h4 class="baloon__title">$[properties.name]</h4>' +
+        '<p class="baloon__price"><span>$[properties.price]</span> р.</p>' +
+      '</div>' +
+    '</section>', {}
+  );
+
+  objectManager.objects.options.set('balloonContentLayout', customBalloonContentLayout)
   objectManager.clusters.options.set('preset', 'islands#darkgreenClusterIcons');
 
   // Отрисовка на карте
@@ -48,6 +59,7 @@ ymaps.ready(() => {
           objectManager.objects.balloon.open(objectId);
           loadBalloonData(objectId).then(function (data) {
               obj.properties.balloonContent = data;
+              console.log(data  );
               objectManager.objects.balloon.setData(obj);
           });
       }

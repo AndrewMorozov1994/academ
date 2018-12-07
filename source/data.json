@@ -11,7 +11,10 @@
         "properties": {
           "balloonContent": "Содержимое балуна",
           "clusterCaption": "Еще одна метка",
-          "hintContent": "Текст подсказки"
+          "hintContent": "Текст подсказки",
+          "img": "/img/special_00.jpg",
+          "name": "4-к квартира, 152м2, 1/20 эт.",
+          "price": "11 100 000"
         }
       },
       {
@@ -24,7 +27,10 @@
         "properties": {
           "balloonContent": "Содержимое балуна",
           "clusterCaption": "Еще одна метка",
-          "hintContent": "Текст подсказки"
+          "hintContent": "Текст подсказки",
+          "img": "/img/special_00.jpg",
+          "name": "6-к квартира, 252м2, 5/5 эт.",
+          "price": "20 600 000"
         }
       },
       {
@@ -37,7 +43,10 @@
         "properties": {
           "balloonContent": "Содержимое балуна",
           "clusterCaption": "Еще одна метка",
-          "hintContent": "Текст подсказки"
+          "hintContent": "Текст подсказки",
+          "img": "/img/special_00.jpg",
+          "name": "1-к квартира, 32м2, 2/9 эт.",
+          "price": "2 930 000"
         }
       },
       {
@@ -50,7 +59,10 @@
         "properties": {
           "balloonContent": "Содержимое балуна",
           "clusterCaption": "Еще одна метка",
-          "hintContent": "Текст подсказки"
+          "hintContent": "Текст подсказки",
+          "img": "/img/special_00.jpg",
+          "name": "студия, 24м2, 23/30 эт.",
+          "price": "1 100 000"
         }
       },
       {
@@ -63,7 +75,10 @@
         "properties": {
           "balloonContent": "Содержимое балуна",
           "clusterCaption": "Еще одна метка",
-          "hintContent": "Текст подсказки"
+          "hintContent": "Текст подсказки",
+          "img": "/img/special_00.jpg",
+          "name": "3-к квартира, 90м2, 16/19 эт.",
+          "price": "7 350 000"
         }
       },
       {
@@ -76,7 +91,10 @@
         "properties": {
           "balloonContent": "Содержимое балуна",
           "clusterCaption": "Еще одна метка",
-          "hintContent": "Текст подсказки"
+          "hintContent": "Текст подсказки",
+          "img": "/img/special_00.jpg",
+          "name": "4-к квартира, 102м2, 3/10 эт.",
+          "price": "10 000 000"
         }
       },
       {
@@ -89,7 +107,10 @@
         "properties": {
           "balloonContent": "Содержимое балуна",
           "clusterCaption": "Еще одна метка",
-          "hintContent": "Текст подсказки"
+          "hintContent": "Текст подсказки",
+          "img": "/img/special_00.jpg",
+          "name": "студия, 18м2, 1/2 эт.",
+          "price": "600 000"
         }
       },
       {
@@ -102,7 +123,10 @@
         "properties": {
           "balloonContent": "Содержимое балуна",
           "clusterCaption": "Еще одна метка",
-          "hintContent": "Текст подсказки"
+          "hintContent": "Текст подсказки",
+          "img": "/img/special_00.jpg",
+          "name": "2-к квартира, 52м2, 6/20 эт.",
+          "price": "4 200 000"
         }
       },
       {
@@ -115,7 +139,10 @@
         "properties": {
           "balloonContent": "Содержимое балуна",
           "clusterCaption": "Еще одна метка",
-          "hintContent": "Текст подсказки"
+          "hintContent": "Текст подсказки",
+          "img": "/img/special_00.jpg",
+          "name": "1-к квартира, 36м2, 3/9 эт.",
+          "price": "2 600 000"
         }
       },
       {
@@ -128,7 +155,10 @@
         "properties": {
           "balloonContent": "Содержимое балуна",
           "clusterCaption": "Еще одна метка",
-          "hintContent": "Текст подсказки"
+          "hintContent": "Текст подсказки",
+          "img": "/img/special_00.jpg",
+          "name": "1-к квартира, 22м2, 30/209 эт.",
+          "price": "1 600 000"
         }
       },
       {
@@ -141,7 +171,10 @@
         "properties": {
           "balloonContent": "Содержимое балуна",
           "clusterCaption": "Еще одна метка",
-          "hintContent": "Текст подсказки"
+          "hintContent": "Текст подсказки",
+          "img": "/img/special_00.jpg",
+          "name": "1-к квартира, 52м2, 6/90 эт.",
+          "price": "2 830 000"
         }
       },
       {
@@ -154,7 +187,10 @@
         "properties": {
           "balloonContent": "Содержимое балуна",
           "clusterCaption": "Еще одна метка",
-          "hintContent": "Текст подсказки"
+          "hintContent": "Текст подсказки",
+          "img": "/img/special_00.jpg",
+          "name": "3-к квартира, 49м2, 2/4 эт.",
+          "price": "4 300 000"
         }
       }
   ]

@@ -64,9 +64,11 @@ const priceMin = $('#minCost');
 const maxCost = $('#maxCost');
 
 range(priceRange, priceMin, maxCost);
+priceRange.draggable();
 
 const sqRange = $('#sq');
 const sqMin = $('#sqMin');
 const sqMax = $('#sqMax');
 
 range(sqRange, sqMin, sqMax);
+sqRange.draggable();
